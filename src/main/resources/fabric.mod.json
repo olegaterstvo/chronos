@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "chronosproject",
+  "version": "${version}",
+
+  "name": "Chronos Project",
+  "description": "description",
+  "authors": [
+    "Ckitipolispolkendarukkroskaposk"
+  ],
+  "contact": {
+    "homepage": "https://chronosproject.space/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.chronos.chronosproject.ChronosProject"
+    ],
+    "client": [
+      "net.chronos.chronosproject.ChronosProjectClient"
+    ]
+  },
+  "mixins": [
+    "chronosproject.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "fabric-api": "*",
+    "minecraft": "~1.19.2",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
