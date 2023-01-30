@@ -3,6 +3,7 @@
   "values": [
     "chronosproject:chronos_concrete",
     "chronosproject:pipskiy_concrete",
+
     "chronosproject:black_concrete_slab",
     "chronosproject:blue_concrete_slab",
     "chronosproject:brown_concrete_slab",
@@ -20,7 +21,26 @@
     "chronosproject:white_concrete_slab",
     "chronosproject:yellow_concrete_slab",
     "chronosproject:chronos_concrete_slab",
-    "chronosproject:pipskiy_concrete_slab"
+    "chronosproject:pipskiy_concrete_slab",
+
+    "chronosproject:black_concrete_stairs",
+    "chronosproject:blue_concrete_stairs",
+    "chronosproject:brown_concrete_stairs",
+    "chronosproject:cyan_concrete_stairs",
+    "chronosproject:gray_concrete_stairs",
+    "chronosproject:green_concrete_stairs",
+    "chronosproject:light_gray_concrete_stairs",
+    "chronosproject:light_blue_concrete_stairs",
+    "chronosproject:lime_concrete_stairs",
+    "chronosproject:magenta_concrete_stairs",
+    "chronosproject:orange_concrete_stairs",
+    "chronosproject:pink_concrete_stairs",
+    "chronosproject:purple_concrete_stairs",
+    "chronosproject:red_concrete_stairs",
+    "chronosproject:white_concrete_stairs",
+    "chronosproject:yellow_concrete_stairs",
+    "chronosproject:chronos_concrete_stairs",
+    "chronosproject:pipskiy_concrete_stairs"
 
   ]
 }

@@ -23,9 +23,27 @@
   "block.chronosproject.red_concrete_slab": "Red Concrete Slab",
   "block.chronosproject.white_concrete_slab": "White Concrete Slab",
   "block.chronosproject.yellow_concrete_slab": "Yellow Concrete Slab",
-
   "block.chronosproject.chronos_concrete_slab": "Indigo Concrete Slab",
   "block.chronosproject.pipskiy_concrete_slab": "Chartreuse Concrete Slab",
+
+  "block.chronosproject.black_concrete_stairs": "Black Concrete Stairs",
+  "block.chronosproject.blue_concrete_stairs": "Blue Concrete Stairs",
+  "block.chronosproject.brown_concrete_stairs": "Brown Concrete Stairs",
+  "block.chronosproject.cyan_concrete_stairs": "Cyan Concrete Stairs",
+  "block.chronosproject.gray_concrete_stairs": "Gray Concrete Stairs",
+  "block.chronosproject.green_concrete_stairs": "Green Concrete Stairs",
+  "block.chronosproject.light_gray_concrete_stairs": "Light Gray Concrete Stairs",
+  "block.chronosproject.light_blue_concrete_stairs": "Light Blue Concrete Stairs",
+  "block.chronosproject.lime_concrete_stairs": "Lime Concrete Stairs",
+  "block.chronosproject.magenta_concrete_stairs": "Magenta Concrete Stairs",
+  "block.chronosproject.orange_concrete_stairs": "Orange Concrete Stairs",
+  "block.chronosproject.pink_concrete_stairs": "Pink Concrete Stairs",
+  "block.chronosproject.purple_concrete_stairs": "Purple Concrete Stairs",
+  "block.chronosproject.red_concrete_stairs": "Red Concrete Stairs",
+  "block.chronosproject.white_concrete_stairs": "White Concrete Stairs",
+  "block.chronosproject.yellow_concrete_stairs": "Yellow Concrete Stairs",
+  "block.chronosproject.chronos_concrete_stairs": "Indigo Concrete Stairs",
+  "block.chronosproject.pipskiy_concrete_stairs": "Chartreuse Concrete Stairs",
 
 
   "itemGroup.chronosproject.chronosproject": "Chronos Project"
