@@ -100,7 +100,7 @@
       "y": 270
     },
     "facing=south,half=bottom,shape=inner_left": {
-      "model": "chronosproject:block/white_concrete_inner"
+      "model": "chronosproject:block/white_concrete_stairs_inner"
     },
     "facing=south,half=bottom,shape=inner_right": {
       "model": "chronosproject:block/white_concrete_stairs_inner",

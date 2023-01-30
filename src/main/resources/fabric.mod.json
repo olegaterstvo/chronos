@@ -10,11 +10,11 @@
   ],
   "contact": {
     "homepage": "https://chronosproject.space/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/olegaterstvo/chronos"
   },
 
   "license": "MIT License",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/chronosproject/icon.png",
 
   "environment": "*",
   "entrypoints": {

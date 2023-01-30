@@ -1,6 +1,7 @@
 package net.chronos.chronosproject.block;
 
 import net.chronos.chronosproject.ChronosProject;
+import net.chronos.chronosproject.block.custom.ModConcretePowderBlock;
 import net.chronos.chronosproject.block.custom.ModStairsBlock;
 import net.chronos.chronosproject.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -19,13 +20,51 @@ public class ModBlocks {
     public static final Block PIPSKIY_CONCRETE = registerBlock("pipskiy_concrete",
             new Block(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
     public static final Block CHRONOS_CONCRETE_POWDER = registerBlock("chronos_concrete_powder",
-            new FallingBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.SAND).strength(0.5f).hardness(0.5F)), ModItemGroup.CHRONOSPROJECT);
+            new ModConcretePowderBlock(ModBlocks.CHRONOS_CONCRETE, FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.SAND).strength(0.5f).hardness(0.5F)), ModItemGroup.CHRONOSPROJECT);
     public static final Block PIPSKIY_CONCRETE_POWDER = registerBlock("pipskiy_concrete_powder",
-            new FallingBlock(FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.SAND).strength(0.5f).hardness(0.5F)), ModItemGroup.CHRONOSPROJECT);
+            new ModConcretePowderBlock(ModBlocks.PIPSKIY_CONCRETE, FabricBlockSettings.of(Material.SOIL).sounds(BlockSoundGroup.SAND).strength(0.5f).hardness(0.5F)), ModItemGroup.CHRONOSPROJECT);
     public static final Block WHITE_CONCRETE_SLAB = registerBlock("white_concrete_slab",
             new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block ORANGE_CONCRETE_SLAB = registerBlock("orange_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block MAGENTA_CONCRETE_SLAB = registerBlock("magenta_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_BLUE_CONCRETE_SLAB = registerBlock("light_blue_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block YELLOW_CONCRETE_SLAB = registerBlock("yellow_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIME_CONCRETE_SLAB = registerBlock("lime_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PINK_CONCRETE_SLAB = registerBlock("pink_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GRAY_CONCRETE_SLAB = registerBlock("gray_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_GRAY_CONCRETE_SLAB = registerBlock("light_gray_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block CYAN_CONCRETE_SLAB = registerBlock("cyan_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PURPLE_CONCRETE_SLAB = registerBlock("purple_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLUE_CONCRETE_SLAB = registerBlock("blue_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BROWN_CONCRETE_SLAB = registerBlock("brown_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GREEN_CONCRETE_SLAB = registerBlock("green_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block RED_CONCRETE_SLAB = registerBlock("red_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLACK_CONCRETE_SLAB = registerBlock("black_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block CHRONOS_CONCRETE_SLAB = registerBlock("chronos_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PIPSKIY_CONCRETE_SLAB = registerBlock("pipskiy_concrete_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+
+
+
+
     public static final Block WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs",
-            new ModStairsBlock(ModBlocks.CHRONOS_CONCRETE.getDefaultState(),FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new ModStairsBlock(Blocks.WHITE_CONCRETE.getDefaultState(),FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
 
 
 

@@ -1,11 +1,32 @@
 {
-  "item.chronosproject.chronos_dye": "Chronos Dye",
-  "item.chronosproject.pipskiy_dye": "Pipskiy Dye",
+  "item.chronosproject.chronos_dye": "Indigo Dye",
+  "item.chronosproject.pipskiy_dye": "Chartreuse Dye",
 
-  "block.chronosproject.chronos_concrete": "Chronos Concrete",
-  "block.chronosproject.pipskiy_concrete": "Pipskiy Concrete",
+  "block.chronosproject.chronos_concrete": "Indigo Concrete",
+  "block.chronosproject.pipskiy_concrete": "Chartreuse Concrete",
   "block.chronosproject.chronos_concrete_powder": "Chronos Concrete Powder",
-  "block.chronosproject.pipskiy_concrete_powder": "Pipskiy Concrete Powder",
+  "block.chronosproject.pipskiy_concrete_powder": "Chartreuse Concrete Powder",
+
+  "block.chronosproject.black_concrete_slab": "Black Concrete Slab",
+  "block.chronosproject.blue_concrete_slab": "Blue Concrete Slab",
+  "block.chronosproject.brown_concrete_slab": "Brown Concrete Slab",
+  "block.chronosproject.cyan_concrete_slab": "Cyan Concrete Slab",
+  "block.chronosproject.gray_concrete_slab": "Gray Concrete Slab",
+  "block.chronosproject.green_concrete_slab": "Green Concrete Slab",
+  "block.chronosproject.light_gray_concrete_slab": "Light Gray Concrete Slab",
+  "block.chronosproject.light_blue_concrete_slab": "Light Blue Concrete Slab",
+  "block.chronosproject.lime_concrete_slab": "Lime Concrete Slab",
+  "block.chronosproject.magenta_concrete_slab": "Magenta Concrete Slab",
+  "block.chronosproject.orange_concrete_slab": "Orange Concrete Slab",
+  "block.chronosproject.pink_concrete_slab": "Pink Concrete Slab",
+  "block.chronosproject.purple_concrete_slab": "Purple Concrete Slab",
+  "block.chronosproject.red_concrete_slab": "Red Concrete Slab",
+  "block.chronosproject.white_concrete_slab": "White Concrete Slab",
+  "block.chronosproject.yellow_concrete_slab": "Yellow Concrete Slab",
+
+  "block.chronosproject.chronos_concrete_slab": "Indigo Concrete Slab",
+  "block.chronosproject.pipskiy_concrete_slab": "Chartreuse Concrete Slab",
+
 
   "itemGroup.chronosproject.chronosproject": "Chronos Project"
 
