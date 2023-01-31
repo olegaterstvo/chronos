@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "terracotta_slab",
+    "key": {
+      "#": {
+        "item": "minecraft:orange_terracotta"
+      }
+    },
+    "pattern": [
+      "###"
+    ],
+    "result": {
+      "count": 6,
+      "item": "chronosproject:orange_terracotta_slab"
+    }
+  }

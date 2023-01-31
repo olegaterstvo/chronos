@@ -60,6 +60,39 @@ public class ModBlocks {
     public static final Block PIPSKIY_CONCRETE_SLAB = registerBlock("pipskiy_concrete_slab",
             new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
 
+    public static final Block WHITE_TERRACOTTA_SLAB = registerBlock("white_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block ORANGE_TERRACOTTA_SLAB = registerBlock("orange_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block MAGENTA_TERRACOTTA_SLAB = registerBlock("magenta_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_BLUE_TERRACOTTA_SLAB = registerBlock("light_blue_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block YELLOW_TERRACOTTA_SLAB = registerBlock("yellow_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIME_TERRACOTTA_SLAB = registerBlock("lime_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PINK_TERRACOTTA_SLAB = registerBlock("pink_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GRAY_TERRACOTTA_SLAB = registerBlock("gray_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_GRAY_TERRACOTTA_SLAB = registerBlock("light_gray_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block CYAN_TERRACOTTA_SLAB = registerBlock("cyan_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PURPLE_TERRACOTTA_SLAB = registerBlock("purple_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLUE_TERRACOTTA_SLAB = registerBlock("blue_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BROWN_TERRACOTTA_SLAB = registerBlock("brown_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GREEN_TERRACOTTA_SLAB = registerBlock("green_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block RED_TERRACOTTA_SLAB = registerBlock("red_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLACK_TERRACOTTA_SLAB = registerBlock("black_terracotta_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+
     public static final Block WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs",
             new ModStairsBlock(Blocks.WHITE_CONCRETE.getDefaultState(),FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
     public static final Block ORANGE_CONCRETE_STAIRS = registerBlock("orange_concrete_stairs",
@@ -96,6 +129,40 @@ public class ModBlocks {
             new ModStairsBlock(ModBlocks.CHRONOS_CONCRETE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
     public static final Block PIPSKIY_CONCRETE_STAIRS = registerBlock("pipskiy_concrete_stairs",
             new ModStairsBlock(ModBlocks.PIPSKIY_CONCRETE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+
+
+    public static final Block WHITE_TERRACOTTA_STAIRS = registerBlock("white_terracotta_stairs",
+            new ModStairsBlock(Blocks.WHITE_TERRACOTTA.getDefaultState(),FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block ORANGE_TERRACOTTA_STAIRS = registerBlock("orange_terracotta_stairs",
+            new ModStairsBlock(Blocks.ORANGE_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block MAGENTA_TERRACOTTA_STAIRS = registerBlock("magenta_terracotta_stairs",
+            new ModStairsBlock(Blocks.MAGENTA_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_BLUE_TERRACOTTA_STAIRS = registerBlock("light_blue_terracotta_stairs",
+            new ModStairsBlock(Blocks.LIGHT_BLUE_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block YELLOW_TERRACOTTA_STAIRS = registerBlock("yellow_terracotta_stairs",
+            new ModStairsBlock(Blocks.YELLOW_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIME_TERRACOTTA_STAIRS = registerBlock("lime_terracotta_stairs",
+            new ModStairsBlock(Blocks.LIME_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PINK_TERRACOTTA_STAIRS = registerBlock("pink_terracotta_stairs",
+            new ModStairsBlock(Blocks.PINK_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GRAY_TERRACOTTA_STAIRS = registerBlock("gray_terracotta_stairs",
+            new ModStairsBlock(Blocks.GRAY_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_GRAY_TERRACOTTA_STAIRS = registerBlock("light_gray_terracotta_stairs",
+            new ModStairsBlock(Blocks.LIGHT_GRAY_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block CYAN_TERRACOTTA_STAIRS = registerBlock("cyan_terracotta_stairs",
+            new ModStairsBlock(Blocks.CYAN_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PURPLE_TERRACOTTA_STAIRS = registerBlock("purple_terracotta_stairs",
+            new ModStairsBlock(Blocks.PURPLE_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLUE_TERRACOTTA_STAIRS = registerBlock("blue_terracotta_stairs",
+            new ModStairsBlock(Blocks.BLUE_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BROWN_TERRACOTTA_STAIRS = registerBlock("brown_terracotta_stairs",
+            new ModStairsBlock(Blocks.BROWN_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GREEN_TERRACOTTA_STAIRS = registerBlock("green_terracotta_stairs",
+            new ModStairsBlock(Blocks.GREEN_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block RED_TERRACOTTA_STAIRS = registerBlock("red_terracotta_stairs",
+            new ModStairsBlock(Blocks.RED_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLACK_TERRACOTTA_STAIRS = registerBlock("black_terracotta_stairs",
+            new ModStairsBlock(Blocks.BLACK_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
 
 
 
