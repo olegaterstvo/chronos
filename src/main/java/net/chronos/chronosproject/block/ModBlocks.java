@@ -5,14 +5,16 @@ import net.chronos.chronosproject.block.custom.ModConcretePowderBlock;
 import net.chronos.chronosproject.block.custom.ModStairsBlock;
 import net.chronos.chronosproject.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.Registries;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class ModBlocks {
     public static final Block CHRONOS_CONCRETE = registerBlock("chronos_concrete",
@@ -165,82 +167,84 @@ public class ModBlocks {
             new ModStairsBlock(Blocks.BLACK_TERRACOTTA.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25F)), ModItemGroup.CHRONOSPROJECT);
 
     public static final Block WHITE_CONCRETE_PRESSURE_PLATE = registerBlock("white_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block ORANGE_CONCRETE_PRESSURE_PLATE = registerBlock("orange_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block MAGENTA_CONCRETE_PRESSURE_PLATE = registerBlock("magenta_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block LIGHT_BLUE_CONCRETE_PRESSURE_PLATE = registerBlock("light_blue_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block YELLOW_CONCRETE_PRESSURE_PLATE = registerBlock("yellow_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block LIME_CONCRETE_PRESSURE_PLATE = registerBlock("lime_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block PINK_CONCRETE_PRESSURE_PLATE = registerBlock("pink_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block GRAY_CONCRETE_PRESSURE_PLATE = registerBlock("gray_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block LIGHT_GRAY_CONCRETE_PRESSURE_PLATE = registerBlock("light_gray_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block CYAN_CONCRETE_PRESSURE_PLATE = registerBlock("cyan_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block PURPLE_CONCRETE_PRESSURE_PLATE = registerBlock("purple_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block BLUE_CONCRETE_PRESSURE_PLATE = registerBlock("blue_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block BROWN_CONCRETE_PRESSURE_PLATE = registerBlock("brown_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block GREEN_CONCRETE_PRESSURE_PLATE = registerBlock("green_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block RED_CONCRETE_PRESSURE_PLATE = registerBlock("red_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block BLACK_CONCRETE_PRESSURE_PLATE = registerBlock("black_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block CHRONOS_CONCRETE_PRESSURE_PLATE = registerBlock("chronos_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block PIPSKIY_CONCRETE_PRESSURE_PLATE = registerBlock("pipskiy_concrete_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(1.8f).hardness(1.8F), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block WHITE_TERRACOTTA_PRESSURE_PLATE = registerBlock("white_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block ORANGE_TERRACOTTA_PRESSURE_PLATE = registerBlock("orange_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block MAGENTA_TERRACOTTA_PRESSURE_PLATE = registerBlock("magenta_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block LIGHT_BLUE_TERRACOTTA_PRESSURE_PLATE = registerBlock("light_blue_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block YELLOW_TERRACOTTA_PRESSURE_PLATE = registerBlock("yellow_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block LIME_TERRACOTTA_PRESSURE_PLATE = registerBlock("lime_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block PINK_TERRACOTTA_PRESSURE_PLATE = registerBlock("pink_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block GRAY_TERRACOTTA_PRESSURE_PLATE = registerBlock("gray_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block LIGHT_GRAY_TERRACOTTA_PRESSURE_PLATE = registerBlock("light_gray_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block CYAN_TERRACOTTA_PRESSURE_PLATE = registerBlock("cyan_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block PURPLE_TERRACOTTA_PRESSURE_PLATE = registerBlock("purple_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block BLUE_TERRACOTTA_PRESSURE_PLATE = registerBlock("blue_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block BROWN_TERRACOTTA_PRESSURE_PLATE = registerBlock("brown_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block GREEN_TERRACOTTA_PRESSURE_PLATE = registerBlock("green_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block RED_TERRACOTTA_PRESSURE_PLATE = registerBlock("red_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block BLACK_TERRACOTTA_PRESSURE_PLATE = registerBlock("black_terracotta_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(4.2f).hardness(1.25f), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
 
     private static Block registerBlock(String name, Block block, ItemGroup tab){
-        registerBlockitem(name, block, tab);
-        return Registry.register(Registry.BLOCK, new Identifier(ChronosProject.MOD_ID, name), block);
+        registerBlockItem(name, block, tab);
+        return Registry.register(Registries.BLOCK, new Identifier(ChronosProject.MOD_ID, name), block);
     }
 
-    private static Item registerBlockitem(String name, Block block, ItemGroup tab){
-        return Registry.register(Registry.ITEM, new Identifier(ChronosProject.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().group(tab)));
+    private static Item registerBlockItem(String name, Block block, ItemGroup tab){
+        Item item = Registry.register(Registries.ITEM, new Identifier(ChronosProject.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(item));
+        return item;
     }
     public static void registerModBlocks(){
         ChronosProject.LOGGER.debug("Registering ModBlocks for " + ChronosProject.MOD_ID);

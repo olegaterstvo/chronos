@@ -4,12 +4,12 @@
   "version": "${version}",
 
   "name": "Chronos Project",
-  "description": "description",
+  "description": "Release tomorrow",
   "authors": [
     "Ckitipolispolkendarukkroskaposk"
   ],
   "contact": {
-    "homepage": "https://chronosproject.space/",
+    "homepage": "http://chronosproject.space/",
     "sources": "https://github.com/olegaterstvo/chronos"
   },
 
@@ -23,6 +23,9 @@
     ],
     "client": [
       "net.chronos.chronosproject.ChronosProjectClient"
+    ],
+    "fabric-datagen": [
+      "net.chronos.chronosproject.datagen.ModDataGeneration"
     ]
   },
   "mixins": [
@@ -30,9 +33,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.11",
+    "fabricloader": ">=0.14.21",
     "fabric-api": "*",
-    "minecraft": "~1.19.2",
+    "minecraft": "~1.19.4",
     "java": ">=17"
   },
   "suggests": {
