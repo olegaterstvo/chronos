@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/stairs",
-    "textures": {
-      "bottom": "chronosproject:block/chronos_concrete",
-      "side": "chronosproject:block/chronos_concrete",
-      "top": "chronosproject:block/chronos_concrete"
-    }
-  }

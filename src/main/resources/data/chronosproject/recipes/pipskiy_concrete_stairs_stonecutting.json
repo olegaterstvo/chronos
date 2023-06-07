@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "chronosproject:pipskiy_concrete"
-  },
-  "result": "chronosproject:pipskiy_concrete_stairs"
-}

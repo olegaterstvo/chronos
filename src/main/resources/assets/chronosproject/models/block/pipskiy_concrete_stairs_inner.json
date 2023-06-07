@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/inner_stairs",
-    "textures": {
-      "bottom": "chronosproject:block/pipskiy_concrete",
-      "side": "chronosproject:block/pipskiy_concrete",
-      "top": "chronosproject:block/pipskiy_concrete"
-    }
-  }
