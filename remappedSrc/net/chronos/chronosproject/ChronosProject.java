@@ -1,7 +1,6 @@
 package net.chronos.chronosproject;
 
 import net.chronos.chronosproject.block.ModBlocks;
-import net.chronos.chronosproject.item.ModItemGroup;
 import net.chronos.chronosproject.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -14,7 +13,6 @@ public class ChronosProject implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 	}

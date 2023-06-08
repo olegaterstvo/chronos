@@ -9,7 +9,7 @@
     "Ckitipolispolkendarukkroskaposk"
   ],
   "contact": {
-    "homepage": "https://chronosproject.ru/",
+    "homepage": "http://chronosproject.space/",
     "sources": "https://github.com/olegaterstvo/chronos"
   },
 
@@ -35,7 +35,7 @@
   "depends": {
     "fabricloader": ">=0.14.21",
     "fabric-api": "*",
-    "minecraft": "~1.20",
+    "minecraft": "~1.19.4",
     "java": ">=17"
   },
   "suggests": {
