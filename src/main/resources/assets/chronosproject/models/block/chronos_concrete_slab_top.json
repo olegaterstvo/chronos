@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom":  "chronosproject:block/chronos_concrete",
+    "side":  "chronosproject:block/chronos_concrete",
+    "top":  "chronosproject:block/chronos_concrete"
+  }
+}

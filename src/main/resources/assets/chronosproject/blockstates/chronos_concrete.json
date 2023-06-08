@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "chronosproject:block/chronos_concrete"}
+  }
+}

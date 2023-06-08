@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "chronosproject:chronos_concrete"
+  },
+  "result": "chronosproject:chronos_concrete_slab"
+}

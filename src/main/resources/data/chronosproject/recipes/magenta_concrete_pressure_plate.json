@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+      "#": {
+        "item": "minecraft:magenta_concrete"
+      }
+    },
+    "pattern": [
+      "##"
+    ],
+    "result": {
+      "count": 1,
+      "item": "chronosproject:magenta_concrete_pressure_plate"
+    }
+  }
