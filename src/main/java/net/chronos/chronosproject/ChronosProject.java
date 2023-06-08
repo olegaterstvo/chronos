@@ -3,9 +3,14 @@ package net.chronos.chronosproject;
 import com.mojang.logging.LogUtils;
 import net.chronos.chronosproject.block.ModBlocks;
 import net.chronos.chronosproject.item.ModItems;
+import net.chronos.chronosproject.potion.ModPotions;
+import net.chronos.chronosproject.utils.BetterBrewingRecipe;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,6 +40,7 @@ public class ChronosProject
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModPotions.register((eventBus));
 
         eventBus.addListener(this::setup);
 
@@ -44,8 +50,12 @@ public class ChronosProject
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        event.enqueueWork(() -> {
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.COCOA_BEANS, ModPotions.HASTE_POTION.get()));
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.HASTE_POTION.get(), Items.GLOWSTONE_DUST, ModPotions.HASTE2_POTION.get()));
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.HASTE_POTION.get(), Items.REDSTONE, ModPotions.HASTE_PLUS_POTION.get()));
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.NAUTILUS_SHELL, Potions.LUCK));
+
+        });
     }
 }

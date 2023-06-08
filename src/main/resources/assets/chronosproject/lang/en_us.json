@@ -115,6 +115,19 @@
   "block.chronosproject.white_terracotta_pressure_plate": "White Terracotta Pressure Plate",
   "block.chronosproject.yellow_terracotta_pressure_plate": "Yellow Terracotta Pressure Plate",
 
+  "item.minecraft.potion.effect.haste_potion": "Potion of Haste",
+  "item.minecraft.splash_potion.effect.haste_potion": "Splash Potion of Haste",
+  "item.minecraft.lingering_potion.effect.haste_potion": "Lingering Potion of Haste",
+  "item.minecraft.potion.effect.haste2_potion": "Potion of Haste",
+  "item.minecraft.splash_potion.effect.haste2_potion": "Splash Potion of Haste",
+  "item.minecraft.lingering_potion.effect.haste2_potion": "Lingering Potion of Haste",
+  "item.minecraft.potion.effect.haste_plus_potion": "Potion of Haste",
+  "item.minecraft.splash_potion.effect.haste_plus_potion": "Splash Potion of Haste",
+  "item.minecraft.lingering_potion.effect.haste_plus_potion": "Lingering Potion of Haste",
+  "item.minecraft.tipped_arrow.effect.haste_potion": "Arrow of Haste",
+  "item.minecraft.tipped_arrow.effect.haste2_potion": "Arrow of Haste",
+  "item.minecraft.tipped_arrow.effect.haste_plus_potion": "Arrow of Haste",
+
 
   "itemGroup.chronosproject": "Chronos Project"
 
