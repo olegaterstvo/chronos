@@ -3,11 +3,13 @@ package net.chronos.chronosproject.block;
 import net.chronos.chronosproject.ChronosProject;
 import net.chronos.chronosproject.block.custom.ModConcretePowderBlock;
 import net.chronos.chronosproject.block.custom.ModStairsBlock;
+import net.chronos.chronosproject.block.custom.SliceOfCake;
 import net.chronos.chronosproject.item.ModCreativeModeTab;
 import net.chronos.chronosproject.item.ModItems;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -15,7 +17,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -242,6 +246,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLACK_TERRACOTTA_PRESSURE_PLATE = registerBlock("black_terracotta_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
 
+    public static final RegistryObject<Block> SLICE_OF_CAKE = registerBlock("slice_of_cake",
+            () -> new SliceOfCake(BlockBehaviour.Properties.of(Material.CAKE)), ModCreativeModeTab.CHRONOS_TAB, "tooltip.chronosproject.block.slice_of_cake", 1);
+
 
 
 
@@ -254,6 +261,23 @@ public class ModBlocks {
                                                                             CreativeModeTab tab){
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
+
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab, String tooltipKey, Integer stackSize){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tab, tooltipKey, stackSize);
+        return toReturn;
+    }
+    private static <T extends Block>RegistryObject<Item> registerBlockItem (String name, RegistryObject<T> block,
+                                                                            CreativeModeTab tab, String tooltipKey, Integer stackSize){
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab).stacksTo(stackSize)){
+            @Override
+            public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
+                pTooltip.add(new TranslatableComponent(tooltipKey));
+            }
+        });
+    }
+
+
     public static void register(IEventBus eventBus){
         BLOCKS.register(eventBus);
     }

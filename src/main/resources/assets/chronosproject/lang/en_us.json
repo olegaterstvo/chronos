@@ -118,15 +118,19 @@
   "item.minecraft.potion.effect.haste_potion": "Potion of Haste",
   "item.minecraft.splash_potion.effect.haste_potion": "Splash Potion of Haste",
   "item.minecraft.lingering_potion.effect.haste_potion": "Lingering Potion of Haste",
-  "item.minecraft.potion.effect.haste2_potion": "Potion of Haste",
-  "item.minecraft.splash_potion.effect.haste2_potion": "Splash Potion of Haste",
-  "item.minecraft.lingering_potion.effect.haste2_potion": "Lingering Potion of Haste",
-  "item.minecraft.potion.effect.haste_plus_potion": "Potion of Haste",
-  "item.minecraft.splash_potion.effect.haste_plus_potion": "Splash Potion of Haste",
-  "item.minecraft.lingering_potion.effect.haste_plus_potion": "Lingering Potion of Haste",
+  "item.minecraft.potion.effect.strong_haste_potion": "Potion of Haste",
+  "item.minecraft.splash_potion.effect.strong_haste_potion": "Splash Potion of Haste",
+  "item.minecraft.lingering_potion.effect.strong_haste_potion": "Lingering Potion of Haste",
+  "item.minecraft.potion.effect.long_haste_potion": "Potion of Haste",
+  "item.minecraft.splash_potion.effect.long_haste_potion": "Splash Potion of Haste",
+  "item.minecraft.lingering_potion.effect.long_haste__potion": "Lingering Potion of Haste",
   "item.minecraft.tipped_arrow.effect.haste_potion": "Arrow of Haste",
-  "item.minecraft.tipped_arrow.effect.haste2_potion": "Arrow of Haste",
-  "item.minecraft.tipped_arrow.effect.haste_plus_potion": "Arrow of Haste",
+  "item.minecraft.tipped_arrow.effect.strong_haste_potion": "Arrow of Haste",
+  "item.minecraft.tipped_arrow.effect.long_haste_potion": "Arrow of Haste",
+
+  "block.chronosproject.slice_of_cake": "Slice of Cake",
+  "sounds.chronosproject.eat_slice_of_cake": "Sound of eating a slice of cake from terraria",
+  "tooltip.chronosproject.block.slice_of_cake": "Stuff your face. Stuff someone else's face. Whatever.",
 
 
   "itemGroup.chronosproject": "Chronos Project"

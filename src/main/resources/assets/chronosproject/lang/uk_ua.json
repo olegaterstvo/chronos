@@ -118,15 +118,19 @@
   "item.minecraft.potion.effect.haste_potion": "Зілля квапливості",
   "item.minecraft.splash_potion.effect.haste_potion": "Вибухове зілля квапливості",
   "item.minecraft.lingering_potion.effect.haste_potion": "Осiдаюче зілля квапливості",
-  "item.minecraft.potion.effect.haste2_potion": "Зілля квапливості",
-  "item.minecraft.splash_potion.effect.haste2_potion": "Вибухове зілля квапливості",
-  "item.minecraft.lingering_potion.effect.haste2_potion": "Осiдаюче зілля квапливості",
-  "item.minecraft.potion.effect.haste_plus_potion": "Зілля квапливості",
-  "item.minecraft.splash_potion.effect.haste_plus_potion": "Вибухове зілля квапливості",
-  "item.minecraft.lingering_potion.effect.haste_plus_potion": "Осiдаюче зілля квапливості",
+  "item.minecraft.potion.effect.strong_haste_potion": "Зілля квапливості",
+  "item.minecraft.splash_potion.effect.strong_haste_potion": "Вибухове зілля квапливості",
+  "item.minecraft.lingering_potion.effect.strong_haste_potion": "Осiдаюче зілля квапливості",
+  "item.minecraft.potion.effect.long_haste_potion": "Зілля квапливості",
+  "item.minecraft.splash_potion.effect.long_haste_potion": "Вибухове зілля квапливості",
+  "item.minecraft.lingering_potion.effect.long_haste_potion": "Осiдаюче зілля квапливості",
   "item.minecraft.tipped_arrow.effect.haste_potion": "Стріла квапливості",
-  "item.minecraft.tipped_arrow.effect.haste2_potion": "Стріла квапливості",
-  "item.minecraft.tipped_arrow.effect.haste_plus_potion": "Стріла квапливості",
+  "item.minecraft.tipped_arrow.effect.strong_haste_potion": "Стріла квапливості",
+  "item.minecraft.tipped_arrow.effect.long_haste_potion": "Стріла квапливості",
+
+  "block.chronosproject.slice_of_cake": "Slice of Cake",
+  "sounds.chronosproject.eat_slice_of_cake": "Sound of eating a slice of cake from terraria",
+  "tooltip.chronosproject.block.slice_of_cake": "Stuff your face. Stuff someone else's face. Whatever.",
 
   "itemGroup.chronosproject": "Chronos Project"
 

@@ -118,15 +118,19 @@
   "item.minecraft.potion.effect.haste_potion": "Зелье спешки",
   "item.minecraft.splash_potion.effect.haste_potion": "Взрывное зелье спешки",
   "item.minecraft.lingering_potion.effect.haste_potion": "Туманное зелье спешки",
-  "item.minecraft.potion.effect.haste2_potion": "Зелье спешки",
-  "item.minecraft.splash_potion.effect.haste2_potion": "Взрывное зелье спешки",
-  "item.minecraft.lingering_potion.effect.haste2_potion": "Туманное зелье спешки",
-  "item.minecraft.potion.effect.haste_plus_potion": "Зелье спешки",
-  "item.minecraft.splash_potion.effect.haste_plus_potion": "Взрывное зелье спешки",
-  "item.minecraft.lingering_potion.effect.haste_plus_potion": "Туманное зелье спешки",
+  "item.minecraft.potion.effect.strong_haste_potion": "Зелье спешки",
+  "item.minecraft.splash_potion.effect.strong_haste_potion": "Взрывное зелье спешки",
+  "item.minecraft.lingering_potion.effect.strong_haste_potion": "Туманное зелье спешки",
+  "item.minecraft.potion.effect.long_haste_potion": "Зелье спешки",
+  "item.minecraft.splash_potion.effect.long_haste_potion": "Взрывное зелье спешки",
+  "item.minecraft.lingering_potion.effect.long_haste_potion": "Туманное зелье спешки",
   "item.minecraft.tipped_arrow.effect.haste_potion": "Стрела спешки",
-  "item.minecraft.tipped_arrow.effect.haste2_potion": "Стрела спешки",
-  "item.minecraft.tipped_arrow.effect.haste_plus_potion": "Стрела спешки",
+  "item.minecraft.tipped_arrow.effect.strong_haste_potion": "Стрела спешки",
+  "item.minecraft.tipped_arrow.effect.long_haste_potion": "Стрела спешки",
+
+  "block.chronosproject.slice_of_cake": "Кусок торта",
+  "sounds.chronosproject.eat_slice_of_cake": "Звук поедания куска торта из террарии",
+  "tooltip.chronosproject.block.slice_of_cake": "Заставляет вас заткнуться. Заставляет другого заткнуться. Неважно.",
 
 
   "itemGroup.chronosproject": "Chronos Project"
