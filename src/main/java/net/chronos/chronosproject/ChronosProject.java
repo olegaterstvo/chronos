@@ -1,7 +1,10 @@
 package net.chronos.chronosproject;
 
 import net.chronos.chronosproject.block.ModBlocks;
+import net.chronos.chronosproject.config.ModConfigs;
 import net.chronos.chronosproject.item.ModItems;
+import net.chronos.chronosproject.potion.ModPotions;
+import net.chronos.chronosproject.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +16,11 @@ public class ChronosProject implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+		ModConfigs.registerConfigs();
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModPotions.registerPotions();
+		ModSounds.registerModSounds();
 	}
 }
