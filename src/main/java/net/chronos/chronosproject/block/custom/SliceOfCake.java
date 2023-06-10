@@ -1,5 +1,6 @@
 package net.chronos.chronosproject.block.custom;
 
+import net.chronos.chronosproject.config.ChronosProjectCommonConfigs;
 import net.chronos.chronosproject.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -85,17 +86,19 @@ public class SliceOfCake extends Block {
 //            } else {
                 pPlayer.awardStat(Stats.EAT_CAKE_SLICE);
                 pPlayer.playSound(ModSounds.EAT_SLICE_OF_CAKE.get(), 1.0F, 1.0F);
-                pPlayer.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 36000, 2));
-                pPlayer.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 36000, 1));
+                pPlayer.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, ChronosProjectCommonConfigs.CAKE_HUST_DURATION.get(),  ChronosProjectCommonConfigs.CAKE_HUST_AMPLIFIER.get()));
+                pPlayer.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, ChronosProjectCommonConfigs.CAKE_SWIFTNESS_DURATION.get(),  ChronosProjectCommonConfigs.CAKE_SWIFTNESS_AMPLIFIER.get()));
 //                pPlayer.getFoodData().eat(2, 0.1F);
                 int i = pState.getValue(BITES);
                 pLevel.gameEvent(pPlayer, GameEvent.EAT, pPos);
-//                if (i < 6) {
-//                    pLevel.setBlock(pPos, pState.setValue(BITES, Integer.valueOf(i + 1)), 3);
-//                } else {
-//                    pLevel.removeBlock(pPos, false);
-//                    pLevel.gameEvent(pPlayer, GameEvent.BLOCK_DESTROY, pPos);
-//                }
+                if (ChronosProjectCommonConfigs.CAKE_IS_CONSUMABLE.get()) {
+                    if (i < 6) {
+                        pLevel.setBlock(pPos, pState.setValue(BITES, Integer.valueOf(i + 1)), 3);
+                    } else {
+                        pLevel.removeBlock(pPos, false);
+                        pLevel.gameEvent(pPlayer, GameEvent.BLOCK_DESTROY, pPos);
+                    }
+                }
 
                 return InteractionResult.SUCCESS;
 //            }

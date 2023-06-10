@@ -48,6 +48,22 @@
     "chronosproject:brown_terracotta_pressure_plate",
     "chronosproject:green_terracotta_pressure_plate",
     "chronosproject:red_terracotta_pressure_plate",
-    "chronosproject:black_terracotta_pressure_plate"
+    "chronosproject:black_terracotta_pressure_plate",
+    "chronosproject:black_terracotta_wall",
+    "chronosproject:blue_terracotta_wall",
+    "chronosproject:brown_terracotta_wall",
+    "chronosproject:cyan_terracotta_wall",
+    "chronosproject:gray_terracotta_wall",
+    "chronosproject:green_terracotta_wall",
+    "chronosproject:light_gray_terracotta_wall",
+    "chronosproject:light_blue_terracotta_wall",
+    "chronosproject:lime_terracotta_wall",
+    "chronosproject:magenta_terracotta_wall",
+    "chronosproject:orange_terracotta_wall",
+    "chronosproject:pink_terracotta_wall",
+    "chronosproject:purple_terracotta_wall",
+    "chronosproject:red_terracotta_wall",
+    "chronosproject:white_terracotta_wall",
+    "chronosproject:yellow_terracotta_wall"
   ]
 }

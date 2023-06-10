@@ -2,6 +2,8 @@ package net.chronos.chronosproject;
 
 import com.mojang.logging.LogUtils;
 import net.chronos.chronosproject.block.ModBlocks;
+import net.chronos.chronosproject.config.ChronosProjectClientConfigs;
+import net.chronos.chronosproject.config.ChronosProjectCommonConfigs;
 import net.chronos.chronosproject.item.ModItems;
 import net.chronos.chronosproject.potion.ModPotions;
 import net.chronos.chronosproject.sound.ModSounds;
@@ -11,7 +13,9 @@ import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -35,6 +39,9 @@ public class ChronosProject
         ModSounds.register(eventBus);
 
         eventBus.addListener(this::setup);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ChronosProjectClientConfigs.SPEC,"chronosproject-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ChronosProjectCommonConfigs.SPEC,"chronosproject-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

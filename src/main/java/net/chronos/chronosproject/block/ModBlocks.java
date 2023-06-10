@@ -246,8 +246,81 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLACK_TERRACOTTA_PRESSURE_PLATE = registerBlock("black_terracotta_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
 
+    public static final RegistryObject<Block> WHITE_CONCRETE_WALL = registerBlock("white_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> ORANGE_CONCRETE_WALL = registerBlock("orange_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> MAGENTA_CONCRETE_WALL = registerBlock("magenta_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> LIGHT_BLUE_CONCRETE_WALL = registerBlock("light_blue_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> YELLOW_CONCRETE_WALL = registerBlock("yellow_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> LIME_CONCRETE_WALL = registerBlock("lime_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> PINK_CONCRETE_WALL = registerBlock("pink_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> GRAY_CONCRETE_WALL = registerBlock("gray_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_WALL = registerBlock("light_gray_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> CYAN_CONCRETE_WALL = registerBlock("cyan_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> PURPLE_CONCRETE_WALL = registerBlock("purple_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> BLUE_CONCRETE_WALL = registerBlock("blue_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> BROWN_CONCRETE_WALL = registerBlock("brown_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> GREEN_CONCRETE_WALL = registerBlock("green_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> RED_CONCRETE_WALL = registerBlock("red_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> BLACK_CONCRETE_WALL = registerBlock("black_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> CHRONOS_CONCRETE_WALL = registerBlock("chronos_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> PIPSKIY_CONCRETE_WALL = registerBlock("pipskiy_concrete_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+
+    public static final RegistryObject<Block> WHITE_TERRACOTTA_WALL = registerBlock("white_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> ORANGE_TERRACOTTA_WALL = registerBlock("orange_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> MAGENTA_TERRACOTTA_WALL = registerBlock("magenta_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_WALL = registerBlock("light_blue_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> YELLOW_TERRACOTTA_WALL = registerBlock("yellow_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> LIME_TERRACOTTA_WALL = registerBlock("lime_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> PINK_TERRACOTTA_WALL = registerBlock("pink_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> GRAY_TERRACOTTA_WALL = registerBlock("gray_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_WALL = registerBlock("light_gray_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> CYAN_TERRACOTTA_WALL = registerBlock("cyan_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> PURPLE_TERRACOTTA_WALL = registerBlock("purple_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> BLUE_TERRACOTTA_WALL = registerBlock("blue_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> BROWN_TERRACOTTA_WALL = registerBlock("brown_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> GREEN_TERRACOTTA_WALL = registerBlock("green_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> RED_TERRACOTTA_WALL = registerBlock("red_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+    public static final RegistryObject<Block> BLACK_TERRACOTTA_WALL = registerBlock("black_terracotta_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.2f).explosionResistance(1.25f)), ModCreativeModeTab.CHRONOS_TAB);
+
+
     public static final RegistryObject<Block> SLICE_OF_CAKE = registerBlock("slice_of_cake",
-            () -> new SliceOfCake(BlockBehaviour.Properties.of(Material.CAKE)), ModCreativeModeTab.CHRONOS_TAB, "tooltip.chronosproject.block.slice_of_cake", 1);
+            () -> new SliceOfCake(BlockBehaviour.Properties.of(Material.CAKE).strength(2.0F)), ModCreativeModeTab.CHRONOS_TAB, "tooltip.chronosproject.block.slice_of_cake", 1);
+
+
 
 
 
