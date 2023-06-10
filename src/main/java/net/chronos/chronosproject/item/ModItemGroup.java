@@ -1,6 +1,7 @@
 package net.chronos.chronosproject.item;
 
 import net.chronos.chronosproject.ChronosProject;
+import net.chronos.chronosproject.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -13,7 +14,7 @@ public class ModItemGroup {
     public static void registerItemGroups(){
         CHRONOSPROJECT = FabricItemGroup.builder(new Identifier(ChronosProject.MOD_ID, "chronosproject"))
                 .displayName(Text.literal("Chronos Project"))
-                .icon(() -> new ItemStack(ModItems.CHRONOS_DYE))
+                .icon(() -> new ItemStack(ModBlocks.SLICE_OF_CAKE))
                 .build();
     }
 }

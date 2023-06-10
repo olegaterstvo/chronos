@@ -14,6 +14,8 @@ public class ModItems {
             new Item(new FabricItemSettings()));
     public static final Item PIPSKIY_DYE = registerItem("pipskiy_dye",
             new Item(new FabricItemSettings()));
+    public static final Item ICON = registerItem("icon",
+            new Item(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(ChronosProject.MOD_ID, name), item);
