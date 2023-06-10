@@ -1,6 +1,7 @@
 package net.chronos.chronosproject.item;
 
 import net.chronos.chronosproject.ChronosProject;
+import net.chronos.chronosproject.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -16,7 +17,7 @@ public class ModItemGroup {
 
     public static void registerItemGroups() {
         Registry.register(Registries.ITEM_GROUP, CHRONOSPROJECT, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(ModItems.CHRONOS_DYE))
+                .icon(() -> new ItemStack(ModBlocks.SLICE_OF_CAKE))
                 .displayName(Text.literal("Chronos Project"))
                 .build()); // build() no longer registers by itself
     }

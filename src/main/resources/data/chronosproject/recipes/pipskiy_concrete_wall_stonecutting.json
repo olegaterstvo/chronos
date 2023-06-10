@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "chronosproject:pipskiy_concrete"
+    },
+    "result": "chronosproject:pipskiy_concrete_wall",
+    "count": 1
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "chronosproject:chronos_concrete"
+      }
+    },
+    "result": {
+      "item": "chronosproject:chronos_concrete_wall",
+      "count": 6
+    }
+}

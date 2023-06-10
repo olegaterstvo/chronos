@@ -3,20 +3,28 @@ package net.chronos.chronosproject.block;
 import net.chronos.chronosproject.ChronosProject;
 import net.chronos.chronosproject.block.custom.ModConcretePowderBlock;
 import net.chronos.chronosproject.block.custom.ModStairsBlock;
+import net.chronos.chronosproject.block.custom.SliceOfCake;
 import net.chronos.chronosproject.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registry;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ModBlocks {
     public static final Block CHRONOS_CONCRETE = registerBlock("chronos_concrete",
@@ -236,6 +244,99 @@ public class ModBlocks {
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.create().strength(4.2f).hardness(1.25f).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
     public static final Block BLACK_TERRACOTTA_PRESSURE_PLATE = registerBlock("black_terracotta_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.create().strength(4.2f).hardness(1.25f).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.STONE), ModItemGroup.CHRONOSPROJECT);
+
+
+    public static final Block WHITE_CONCRETE_WALL = registerBlock("white_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block ORANGE_CONCRETE_WALL = registerBlock("orange_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block MAGENTA_CONCRETE_WALL = registerBlock("magenta_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_BLUE_CONCRETE_WALL = registerBlock("light_blue_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block YELLOW_CONCRETE_WALL = registerBlock("yellow_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIME_CONCRETE_WALL = registerBlock("lime_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PINK_CONCRETE_WALL = registerBlock("pink_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GRAY_CONCRETE_WALL = registerBlock("gray_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_GRAY_CONCRETE_WALL = registerBlock("light_gray_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block CYAN_CONCRETE_WALL = registerBlock("cyan_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PURPLE_CONCRETE_WALL = registerBlock("purple_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLUE_CONCRETE_WALL = registerBlock("blue_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BROWN_CONCRETE_WALL = registerBlock("brown_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GREEN_CONCRETE_WALL = registerBlock("green_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block RED_CONCRETE_WALL = registerBlock("red_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLACK_CONCRETE_WALL = registerBlock("black_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block CHRONOS_CONCRETE_WALL = registerBlock("chronos_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PIPSKIY_CONCRETE_WALL = registerBlock("pipskiy_concrete_wall",
+            new WallBlock(FabricBlockSettings.create().strength(1.8f).hardness(1.8F)), ModItemGroup.CHRONOSPROJECT);
+
+    public static final Block WHITE_TERRACOTTA_WALL = registerBlock("white_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block ORANGE_TERRACOTTA_WALL = registerBlock("orange_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block MAGENTA_TERRACOTTA_WALL = registerBlock("magenta_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_BLUE_TERRACOTTA_WALL = registerBlock("light_blue_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block YELLOW_TERRACOTTA_WALL = registerBlock("yellow_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIME_TERRACOTTA_WALL = registerBlock("lime_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PINK_TERRACOTTA_WALL = registerBlock("pink_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GRAY_TERRACOTTA_WALL = registerBlock("gray_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block LIGHT_GRAY_TERRACOTTA_WALL = registerBlock("light_gray_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block CYAN_TERRACOTTA_WALL = registerBlock("cyan_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block PURPLE_TERRACOTTA_WALL = registerBlock("purple_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLUE_TERRACOTTA_WALL = registerBlock("blue_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BROWN_TERRACOTTA_WALL = registerBlock("brown_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block GREEN_TERRACOTTA_WALL = registerBlock("green_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block RED_TERRACOTTA_WALL = registerBlock("red_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+    public static final Block BLACK_TERRACOTTA_WALL = registerBlock("black_terracotta_wall",
+            new WallBlock(FabricBlockSettings.create().strength(4.2f).hardness(1.25f)), ModItemGroup.CHRONOSPROJECT);
+
+    public static final Block SLICE_OF_CAKE = registerBlock("slice_of_cake",
+            new SliceOfCake(FabricBlockSettings.create().strength(2.0f)), ModItemGroup.CHRONOSPROJECT, "tooltip.chronosproject.block.slice_of_cake", 1);
+
+
+    private static Block registerBlock(String name, Block block,  RegistryKey<ItemGroup> tab, String tooltipKey, Integer stackSize){
+        registerBlockItem(name, block, tab, tooltipKey, stackSize);
+        return Registry.register(Registries.BLOCK, new Identifier(ChronosProject.MOD_ID, name), block);
+    }
+
+    private static Item registerBlockItem(String name, Block block,  RegistryKey<ItemGroup> tab, String tooltipKey, Integer stackSize){
+        Item item = Registry.register(Registries.ITEM, new Identifier(ChronosProject.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings().maxCount(stackSize)){
+                    @Override
+                    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+                        tooltip.add(Text.translatable(tooltipKey));
+                    }
+                });
+        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(item));
+        return item;
+    }
+
 
     private static Block registerBlock(String name, Block block, RegistryKey<ItemGroup> tab){
         registerBlockItem(name, block, tab);
