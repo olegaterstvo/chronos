@@ -5,6 +5,7 @@ import net.chronos.chronosproject.config.ModConfigs;
 import net.chronos.chronosproject.item.ModItems;
 import net.chronos.chronosproject.potion.ModPotions;
 import net.chronos.chronosproject.sound.ModSounds;
+import net.chronos.chronosproject.trade.ModTrades;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,5 +23,6 @@ public class ChronosProject implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModPotions.registerPotions();
 		ModSounds.registerModSounds();
+		ModTrades.registerCustomTrades();
 	}
 }
