@@ -1,20 +1,28 @@
 package net.chronos.chronosproject.effect;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.chronos.chronosproject.event.ModEvents;
+import net.minecraft.client.gui.GuiComponent;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.client.EffectRenderer;
 
 import java.util.Random;
+import java.util.function.Consumer;
 
 public class ParanoiaEffect extends MobEffect {
-    private static int ticks = 100;
+    private static final int ticks = 100;
     private int i = 0;
     private int random = -1;
     private int randBlock = -1;
+    private boolean shouldRender = Boolean.TRUE;
 
     public ParanoiaEffect(MobEffectCategory mobEffectCategory, int color) {
         super(mobEffectCategory, color);
@@ -30,20 +38,16 @@ public class ParanoiaEffect extends MobEffect {
             }
         }
     }
-    public static boolean isSwimming = Boolean.FALSE;
+
     private void setSwim(LivingEntity pLivingEntity){
         if (pLivingEntity.level.isClientSide()) {
             pLivingEntity.setSwimming(Boolean.TRUE);
-            isSwimming = Boolean.TRUE;
             if (Math.floorMod(i, 40) == 0) {
 //                pLivingEntity.playSound(SoundEvents.PLAYER_HURT_DROWN, 1, 1);
                 pLivingEntity.playSound(SoundEvents.AMBIENT_UNDERWATER_LOOP, 2, 1);
             }
         }
     }
-//    private void setFrozen(LivingEntity pLivingEntity){
-//
-//    }
     private void setHurt(LivingEntity pLivingEntity){
         if (pLivingEntity.level.isClientSide()) {
             if (Math.floorMod(i, 40) == 0) {
@@ -116,42 +120,30 @@ public class ParanoiaEffect extends MobEffect {
             }
         }
         if (random == 0) {
-            isSwimming = Boolean.FALSE;
             setFire(pLivingEntity);
         } else if (random == 1) {
             setSwim(pLivingEntity);
         } else if (random == 2) {
-            isSwimming = Boolean.FALSE;
-//                setFrozen(pLivingEntity);
             pLivingEntity.setIsInPowderSnow(Boolean.TRUE);
         } else if (random == 3) {
-            isSwimming = Boolean.FALSE;
             setHurt(pLivingEntity);
         } else if (random == 4) {
-            isSwimming = Boolean.FALSE;
             setBlock(pLivingEntity);
         } else if (random == 5) {
             setFire(pLivingEntity);
             setSwim(pLivingEntity);
         } else if (random == 6) {
-//                setFrozen(pLivingEntity);
             pLivingEntity.setIsInPowderSnow(Boolean.TRUE);
             setSwim(pLivingEntity);
         } else if (random == 7) {
-            isSwimming = Boolean.FALSE;
-//                setFrozen(pLivingEntity);
             pLivingEntity.setIsInPowderSnow(Boolean.TRUE);
             setBlock(pLivingEntity);
         } else if (random == 8) {
-            isSwimming = Boolean.FALSE;
             setFire(pLivingEntity);
             setBlock(pLivingEntity);
         } else if (random == 9 && pLivingEntity.level.isClientSide()) {
-            isSwimming = Boolean.FALSE;
             pLivingEntity.level.explode(pLivingEntity, pLivingEntity.getRandomX(30), pLivingEntity.getY(), pLivingEntity.getRandomZ(30), 4.0f, Explosion.BlockInteraction.DESTROY);
             random = 10;
-        }else {
-            isSwimming = Boolean.FALSE;
         }
 
         if (pLivingEntity.level.isClientSide()) i++;
@@ -160,7 +152,46 @@ public class ParanoiaEffect extends MobEffect {
     }
 
     @Override
+    public void initializeClient(Consumer<EffectRenderer> consumer) {
+        consumer.accept(new EffectRenderer() {
+            @Override
+            public boolean shouldRender(MobEffectInstance effect) {
+                return shouldRender;
+            }
+
+            @Override
+            public boolean shouldRenderInvText(MobEffectInstance effect) {
+                return shouldRender;
+            }
+
+            @Override
+            public boolean shouldRenderHUD(MobEffectInstance effect) {
+                return shouldRender;
+            }
+
+            @Override
+            public void renderInventoryEffect(MobEffectInstance effectInstance, EffectRenderingInventoryScreen<?> gui, PoseStack poseStack, int x, int y, float z) {
+
+            }
+
+            @Override
+            public void renderHUDEffect(MobEffectInstance effectInstance, GuiComponent gui, PoseStack poseStack, int x, int y, float z, float alpha) {
+
+            }
+        });
+    }
+
+    @Override
     public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
-        return true;
+        if(pAmplifier == 10){
+            shouldRender = Boolean.FALSE;
+            if(ModEvents.timeout > 0){
+                ModEvents.timeout--;
+            }
+            return ModEvents.timeout == 0;
+        } else {
+            shouldRender = Boolean.TRUE;
+            return true;
+        }
     }
 }

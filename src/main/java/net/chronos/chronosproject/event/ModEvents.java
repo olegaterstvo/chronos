@@ -12,7 +12,7 @@ import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -36,40 +36,23 @@ public class ModEvents {
             }
         }
     }
-    private static float lastHealth = -1;
-    private static float ticks = new Random().nextInt(3,12) * 200;
-    private static boolean infected = Boolean.FALSE;
+    public static int timeout;
     @SubscribeEvent
-    public static void applyCustomEffect(PlayerEvent playerEvent){
-        if (lastHealth < 0.1){
-            lastHealth = playerEvent.getPlayer().getHealth();
-            infected = Boolean.FALSE;
-        }
-        if (playerEvent.getPlayer().getLastHurtByMob() != null){
-            if(playerEvent.getPlayer().getHealth() < lastHealth ) {
-                lastHealth = playerEvent.getPlayer().getHealth();
-                if(playerEvent.getPlayer().getLastHurtByMob().getMobType() == MobType.UNDEAD){
+    public static void applyCustomEffectOnHit(LivingDamageEvent livingDamageEvent) {
+        ChronosProject.LOGGER.debug("" + livingDamageEvent);
+        if (livingDamageEvent.getEntityLiving().getLastHurtByMob() != null){
+            if(livingDamageEvent.getEntityLiving().getLastHurtByMob().getMobType() == MobType.UNDEAD) {
+                if (!String.valueOf(livingDamageEvent.getEntityLiving().getActiveEffects()).contains("effect.chronosproject.psychosis")) {
                     int rand = new Random().nextInt(10);
                     if (rand == 0) {
-                        infected = Boolean.TRUE;
-                        ChronosProject.LOGGER.info(playerEvent.getPlayer().getName().getString() +" is infected");
+                        timeout = new Random().nextInt(3, 18) * 200;
+                        ChronosProject.LOGGER.info(livingDamageEvent.getEntityLiving().getName().getString() + " is infected");
+                        livingDamageEvent.getEntityLiving().addEffect(new MobEffectInstance(ModEffects.PARANOIA.get(), 900 + timeout, 10));
                     }
                 }
             }
         }
-        if(infected){
-            ticks = ticks - 1;
-            if (ticks == 0) {
-                playerEvent.getPlayer().addEffect(new MobEffectInstance(ModEffects.PARANOIA.get(), 1200, 0));
-                infected = Boolean.FALSE;
-                ticks = new Random().nextInt(3,18) * 200;
-            }
-        }
-        if (playerEvent.getPlayer().getActiveEffects().contains(new MobEffectInstance(ModEffects.PARANOIA.get()))){
-            playerEvent.getPlayer().removeEffect(ModEffects.PARANOIA.get());
-        }
-        if (lastHealth < playerEvent.getPlayer().getHealth()) {
-            lastHealth = playerEvent.getPlayer().getHealth();
-        }
+
     }
+
 }
