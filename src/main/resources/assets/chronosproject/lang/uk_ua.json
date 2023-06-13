@@ -150,8 +150,6 @@
   "block.chronosproject.red_terracotta_wall": "Червона керамічна огорожа",
   "block.chronosproject.white_terracotta_wall": "Біла керамічна огорожа",
   "block.chronosproject.yellow_terracotta_wall": "Жовта керамічна огорожа",
-  "block.chronosproject.chronos_terracotta_wall": "Барвінкова керамічна огорожа",
-  "block.chronosproject.pipskiy_terracotta_wall": "Піпська керамічна огорожа",
 
   "item.minecraft.potion.effect.haste_potion": "Зілля квапливості",
   "item.minecraft.splash_potion.effect.haste_potion": "Вибухове зілля квапливості",
@@ -165,10 +163,16 @@
   "item.minecraft.tipped_arrow.effect.haste_potion": "Стріла квапливості",
   "item.minecraft.tipped_arrow.effect.strong_haste_potion": "Стріла квапливості",
   "item.minecraft.tipped_arrow.effect.long_haste_potion": "Стріла квапливості",
+  "item.minecraft.potion.effect.psychosis_potion": "Зілля психозу",
+  "item.minecraft.splash_potion.effect.psychosis_potion": "Вибухове зілля психозу",
+  "item.minecraft.lingering_potion.effect.psychosis_potion": "Осiдаюче зілля психозу",
+  "item.minecraft.tipped_arrow.effect.psychosis_potion": "Стріла психозу",
 
   "block.chronosproject.slice_of_cake": "Slice of Cake",
   "sounds.chronosproject.eat_slice_of_cake": "Sound of eating a slice of cake from terraria",
   "tooltip.chronosproject.block.slice_of_cake": "§7Stuff your face. Stuff someone else's face. Whatever.§r",
+
+  "effect.chronosproject.psychosis": "Психоз",
 
   "itemGroup.chronosproject": "Chronos Project"
 

@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.chronos.chronosproject.block.ModBlocks;
 import net.chronos.chronosproject.config.ChronosProjectClientConfigs;
 import net.chronos.chronosproject.config.ChronosProjectCommonConfigs;
+import net.chronos.chronosproject.effect.ModEffects;
 import net.chronos.chronosproject.item.ModItems;
 import net.chronos.chronosproject.potion.ModPotions;
 import net.chronos.chronosproject.sound.ModSounds;
@@ -27,7 +28,7 @@ public class ChronosProject
     public static final String MOD_ID = "chronosproject";
 
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public ChronosProject()
     {
@@ -37,6 +38,7 @@ public class ChronosProject
         ModBlocks.register(eventBus);
         ModPotions.register(eventBus);
         ModSounds.register(eventBus);
+        ModEffects.register(eventBus);
 
         eventBus.addListener(this::setup);
 
@@ -54,7 +56,12 @@ public class ChronosProject
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.HASTE_POTION.get(), Items.GLOWSTONE_DUST, ModPotions.STRONG_HASTE_POTION.get()));
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.HASTE_POTION.get(), Items.REDSTONE, ModPotions.LONG_HASTE_POTION.get()));
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.NAUTILUS_SHELL, Potions.LUCK));
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WEAKNESS, Items.ENDER_EYE, ModPotions.PSYCHOSIS_POTION.get()));
 
+//            BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Ingredient.of((ItemLike)Potions.AWKWARD), Ingredient.of(new ItemStack(Items.COCOA_BEANS)), new ItemStack((ItemLike) ModPotions.HASTE_POTION.get())));
+//            BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Ingredient.of((ItemLike)ModPotions.HASTE_POTION.get()), Ingredient.of(Items.GLOWSTONE_DUST), new ItemStack((ItemLike) ModPotions.STRONG_HASTE_POTION.get())));
+//            BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Ingredient.of((ItemLike)ModPotions.HASTE_POTION.get()), Ingredient.of(Items.REDSTONE), new ItemStack((ItemLike) ModPotions.LONG_HASTE_POTION.get())));
+//            BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Ingredient.of((ItemLike)Potions.AWKWARD), Ingredient.of(Items.NAUTILUS_SHELL), new ItemStack((ItemLike) Potions.LUCK)));
         });
     }
 }

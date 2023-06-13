@@ -1,6 +1,7 @@
 package net.chronos.chronosproject.potion;
 
 import net.chronos.chronosproject.ChronosProject;
+import net.chronos.chronosproject.effect.ModEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.alchemy.Potion;
@@ -19,7 +20,8 @@ public class ModPotions {
             () -> new Potion(new MobEffectInstance(MobEffects.DIG_SPEED, 1800, 1)));
     public static final RegistryObject<Potion> LONG_HASTE_POTION = POTIONS.register("long_haste_potion",
             () -> new Potion(new MobEffectInstance(MobEffects.DIG_SPEED, 9600, 0)));
-
+    public static final RegistryObject<Potion> PSYCHOSIS_POTION = POTIONS.register("psychosis_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.PARANOIA.get(), 3600, 0)));
 
 
     public static void register(IEventBus eventBus) {

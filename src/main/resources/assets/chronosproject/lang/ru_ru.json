@@ -163,10 +163,16 @@
   "item.minecraft.tipped_arrow.effect.haste_potion": "Стрела спешки",
   "item.minecraft.tipped_arrow.effect.strong_haste_potion": "Стрела спешки",
   "item.minecraft.tipped_arrow.effect.long_haste_potion": "Стрела спешки",
+  "item.minecraft.potion.effect.psychosis_potion": "Зелье психоза",
+  "item.minecraft.splash_potion.effect.psychosis_potion": "Взрывное зелье психоза",
+  "item.minecraft.lingering_potion.effect.psychosis_potion": "Туманное зелье психоза",
+  "item.minecraft.tipped_arrow.effect.psychosis_potion": "Стрела психоза",
 
   "block.chronosproject.slice_of_cake": "Кусок торта",
   "sounds.chronosproject.eat_slice_of_cake": "Звук поедания куска торта из террарии",
   "tooltip.chronosproject.block.slice_of_cake": "§7Заставляет вас заткнуться. Заставляет другого заткнуться. Неважно.§r",
+
+  "effect.chronosproject.psychosis": "Психоз",
 
 
   "itemGroup.chronosproject": "Chronos Project"
