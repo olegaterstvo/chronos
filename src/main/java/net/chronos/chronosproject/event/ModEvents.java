@@ -43,11 +43,11 @@ public class ModEvents {
         if (livingDamageEvent.getEntityLiving().getLastHurtByMob() != null){
             if(livingDamageEvent.getEntityLiving().getLastHurtByMob().getMobType() == MobType.UNDEAD) {
                 if (!String.valueOf(livingDamageEvent.getEntityLiving().getActiveEffects()).contains("effect.chronosproject.psychosis")) {
-                    int rand = new Random().nextInt(10);
+                    int rand = new Random().nextInt(50);
                     if (rand == 0) {
                         timeout = new Random().nextInt(3, 18) * 200;
                         ChronosProject.LOGGER.info(livingDamageEvent.getEntityLiving().getName().getString() + " is infected");
-                        livingDamageEvent.getEntityLiving().addEffect(new MobEffectInstance(ModEffects.PARANOIA.get(), 900 + timeout, 10));
+                        livingDamageEvent.getEntityLiving().addEffect(new MobEffectInstance(ModEffects.PARANOIA.get(), 600 + timeout, 10));
                     }
                 }
             }
