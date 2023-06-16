@@ -174,6 +174,9 @@
 
   "effect.chronosproject.psychosis": "Psychosis",
 
+  "key.category.chronosproject": "Chronos Project",
+  "key.chronosproject.share_coordinates": "Share Coordinates",
+
   "itemGroup.chronosproject": "Chronos Project"
 
 }
