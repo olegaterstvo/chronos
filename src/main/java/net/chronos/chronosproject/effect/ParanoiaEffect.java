@@ -183,15 +183,15 @@ public class ParanoiaEffect extends MobEffect {
 
     @Override
     public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
-        if(pAmplifier == 10){
-            shouldRender = Boolean.FALSE;
-            if(ModEvents.timeout > 0){
-                ModEvents.timeout--;
-            }
-            return ModEvents.timeout == 0;
-        } else {
-            shouldRender = Boolean.TRUE;
+//        if(pAmplifier == 10){
+//            shouldRender = Boolean.FALSE;
+//            if(ModEvents.timeout > 0){
+//                ModEvents.timeout--;
+//            }
+//            return ModEvents.timeout == 0;
+//        } else {
+//            shouldRender = Boolean.TRUE;
             return true;
-        }
+//        }
     }
 }
