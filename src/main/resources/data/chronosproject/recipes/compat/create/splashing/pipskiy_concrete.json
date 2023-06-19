@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "chronosproject:pipskiy_concrete_powder"
+    }
+  ],
+  "results": [
+    {
+      "item": "chronosproject:pipskiy_concrete"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "chronosproject:chronos_concrete_powder"
+    }
+  ],
+  "results": [
+    {
+      "item": "chronosproject:chronos_concrete"
+    }
+  ]
+}
