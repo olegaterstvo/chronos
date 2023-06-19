@@ -32,9 +32,9 @@ public class ModBlocks {
     public static final  RegistryObject<Block> PIPSKIY_CONCRETE  = registerBlock("pipskiy_concrete",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.8f).explosionResistance(1.8f)), ModCreativeModeTab.CHRONOS_TAB);
     public static final RegistryObject<ModConcretePowderBlock> CHRONOS_CONCRETE_POWDER = registerBlock("chronos_concrete_powder",
-            () -> new ModConcretePowderBlock(ModBlocks.CHRONOS_CONCRETE.get(), BlockBehaviour.Properties.of(Material.SAND).strength(0.5f).explosionResistance(0.5F)), ModCreativeModeTab.CHRONOS_TAB);
+            () -> new ModConcretePowderBlock(ModBlocks.CHRONOS_CONCRETE.get(), BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5f).explosionResistance(0.5F)), ModCreativeModeTab.CHRONOS_TAB);
     public static final RegistryObject<ModConcretePowderBlock> PIPSKIY_CONCRETE_POWDER = registerBlock("pipskiy_concrete_powder",
-            () -> new ModConcretePowderBlock(ModBlocks.PIPSKIY_CONCRETE.get(), BlockBehaviour.Properties.of(Material.SAND).strength(0.5f).explosionResistance(0.5F)), ModCreativeModeTab.CHRONOS_TAB);
+            () -> new ModConcretePowderBlock(ModBlocks.PIPSKIY_CONCRETE.get(), BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5f).explosionResistance(0.5F)), ModCreativeModeTab.CHRONOS_TAB);
 
     public static final RegistryObject<Block> WHITE_CONCRETE_SLAB = registerBlock("white_concrete_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.8f).explosionResistance(1.8F)), ModCreativeModeTab.CHRONOS_TAB);
