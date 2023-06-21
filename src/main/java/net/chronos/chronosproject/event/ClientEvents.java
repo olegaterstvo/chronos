@@ -20,10 +20,12 @@ public class ClientEvents {
         public static void onKeyInput(InputEvent.KeyInputEvent event) {
             if(KeyBinding.SHARE_COORDINATES_KEY.consumeClick()) {
                 assert Minecraft.getInstance().player != null;
-//                Minecraft.getInstance().player.sendMessage(new TextComponent("test"), Minecraft.getInstance().player.getUUID());
-                Minecraft.getInstance().player.chat((int)Minecraft.getInstance().player.getX() + " " +
-                        (int)Minecraft.getInstance().player.getY() + " " +
-                        (int)Minecraft.getInstance().player.getZ());
+//                Minecraft.getInstance().player.chat((int)Math.floor(Minecraft.getInstance().player.getX()) + " " +
+//                        (int)Math.floor(Minecraft.getInstance().player.getY()) + " " +
+//                        (int)Math.floor(Minecraft.getInstance().player.getZ()));
+                Minecraft.getInstance().player.chat(Minecraft.getInstance().player.getBlockX() + " " +
+                        Minecraft.getInstance().player.getBlockY() + " " +
+                        Minecraft.getInstance().player.getBlockZ());
             }
         }
     }
