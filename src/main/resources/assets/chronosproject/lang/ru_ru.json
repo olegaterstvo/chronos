@@ -168,6 +168,8 @@
   "sounds.chronosproject.eat_slice_of_cake": "Звук поедания куска торта из террарии",
   "tooltip.chronosproject.block.slice_of_cake": "§7Заставляет вас заткнуться. Заставляет другого заткнуться. Неважно.§r",
 
+  "key.category.chronosproject.chronos": "Chronos Project",
+  "key.chronosproject.share_coords": "Share Coordinates",
 
   "itemGroup.chronosproject.chronosproject": "Chronos Project"
 

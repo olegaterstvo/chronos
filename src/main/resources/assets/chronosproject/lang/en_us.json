@@ -168,6 +168,9 @@
   "sounds.chronosproject.eat_slice_of_cake": "Sound of eating a slice of cake from terraria",
   "tooltip.chronosproject.block.slice_of_cake": "§7Stuff your face. Stuff someone else's face. Whatever.§r",
 
+  "key.category.chronosproject.chronos": "Chronos Project",
+  "key.chronosproject.share_coords": "Share Coordinates",
+
 
   "itemGroup.chronosproject.chronosproject": "Chronos Project"
 

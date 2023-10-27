@@ -150,8 +150,6 @@
   "block.chronosproject.red_terracotta_wall": "Червона керамічна огорожа",
   "block.chronosproject.white_terracotta_wall": "Біла керамічна огорожа",
   "block.chronosproject.yellow_terracotta_wall": "Жовта керамічна огорожа",
-  "block.chronosproject.chronos_terracotta_wall": "Барвінкова керамічна огорожа",
-  "block.chronosproject.pipskiy_terracotta_wall": "Піпська керамічна огорожа",
 
   "item.minecraft.potion.effect.haste_potion": "Зілля квапливості",
   "item.minecraft.splash_potion.effect.haste_potion": "Вибухове зілля квапливості",
@@ -169,6 +167,9 @@
   "block.chronosproject.slice_of_cake": "Slice of Cake",
   "sounds.chronosproject.eat_slice_of_cake": "Sound of eating a slice of cake from terraria",
   "tooltip.chronosproject.block.slice_of_cake": "§7Stuff your face. Stuff someone else's face. Whatever.§r",
+
+  "key.category.chronosproject.chronos": "Chronos Project",
+  "key.chronosproject.share_coords": "Share Coordinates",
 
   "itemGroup.chronosproject.chronosproject": "Chronos Project"
 
