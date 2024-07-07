@@ -1,11 +1,11 @@
 package net.chronos.chronosproject.block.custom;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.state.BlockState;
 
-public class ModStairsBlock extends StairsBlock {
+public class ModStairsBlock extends StairBlock {
 
-    public ModStairsBlock(BlockState baseBlockState, Settings settings) {
+    public ModStairsBlock(BlockState baseBlockState, Properties settings) {
         super(baseBlockState, settings);
     }
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "chronosproject:chronos_dye"
+  },
+  "base": {
+    "item": "minecraft:diamond_pickaxe"
+  },
+  "result": {
+    "id": "chronosproject:chronos_pickaxe"
+  },
+  "template": {
+    "item": "chronosproject:chronos_upgrade_smithing_template"
+  }
+}

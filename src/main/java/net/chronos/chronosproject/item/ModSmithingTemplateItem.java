@@ -1,16 +1,25 @@
 package net.chronos.chronosproject.item;
 
-import net.minecraft.item.SmithingTemplateItem;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
-
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.SmithingTemplateItem;
+import net.minecraft.network.chat.Component;
 import java.util.Collections;
-import java.util.List;
+
 
 public class ModSmithingTemplateItem extends SmithingTemplateItem {
-    public ModSmithingTemplateItem(Text appliesToText, Text ingredientsText, Text titleText, Text baseSlotDescriptionText, Text additionsSlotDescriptionText, Identifier emptyBaseSlotTextures, Identifier emptyAdditionsSlotTextures) {
-        super(appliesToText, ingredientsText, titleText, baseSlotDescriptionText, additionsSlotDescriptionText, Collections.singletonList(emptyBaseSlotTextures), Collections.singletonList(emptyAdditionsSlotTextures));
+    public ModSmithingTemplateItem(Component appliesToText,
+                                   Component ingredientsText,
+                                   Component titleText,
+                                   Component baseSlotDescriptionText,
+                                   Component additionsSlotDescriptionText,
+                                   ResourceLocation emptyBaseSlotTextures,
+                                   ResourceLocation emptyAdditionsSlotTextures) {
+        super(appliesToText,
+                ingredientsText,
+                titleText,
+                baseSlotDescriptionText,
+                additionsSlotDescriptionText,
+                Collections.singletonList(emptyBaseSlotTextures),
+                Collections.singletonList(emptyAdditionsSlotTextures));
     }
-
-
 }

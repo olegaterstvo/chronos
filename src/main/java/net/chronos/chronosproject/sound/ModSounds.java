@@ -1,21 +1,23 @@
 package net.chronos.chronosproject.sound;
 
 import net.chronos.chronosproject.ChronosProject;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModSounds {
-    public static SoundEvent EAT_SLICE_OF_CAKE;
+    public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
+            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, ChronosProject.MOD_ID);
 
-    private static SoundEvent registerSoundEvent(String name){
-        Identifier id = new Identifier(ChronosProject.MOD_ID, name);
-        return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
+    public static final DeferredHolder<SoundEvent, SoundEvent> EAT_SLICE_OF_CAKE = SOUND_EVENTS.register(
+            "eat_slice_of_cake", // must match the resource location on the next line
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(ChronosProject.MOD_ID, "eat_slice_of_cake"))
+    );
+
+    public static void register(IEventBus eventBus){
+        SOUND_EVENTS.register(eventBus);
     }
-
-    public static void registerModSounds(){
-        EAT_SLICE_OF_CAKE = registerSoundEvent("eat_slice_of_cake");
-    }
-
 }

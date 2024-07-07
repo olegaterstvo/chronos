@@ -165,13 +165,13 @@
   "item.minecraft.tipped_arrow.effect.long_haste_potion": "Стріла квапливості",
 
   "item.chronosproject.chronos_upgrade_smithing_template":"Ковальський шаблон",
-  "item.minecraft.smithing_template.chronos_upgrade": "Chronos Upgrade",
+  "item.minecraft.smithing_template.chronos_upgrade": "ЧРОНОС ПРОЖЕКТ™ покращення",
   "item.minecraft.smithing_template.chronos_upgrade.applies_to": "Diamond Pickaxe",
-  "item.minecraft.smithing_template.chronos_upgrade.ingredients": "Periwinkle Dye",
+  "item.minecraft.smithing_template.chronos_upgrade.ingredients": "Барвінковий барвник",
   "item.minecraft.smithing_template.chronos_upgrade.base_slot_description": "Add diamond pickaxe",
   "item.minecraft.smithing_template.chronos_upgrade.additions_slot_description": "Add periwinkle dye",
 
-  "item.chronosproject.chronos_pickaxe": "Chronos Pickaxe",
+  "item.chronosproject.chronos_pickaxe": "ЧРОНОС ПРОЖЕКТ™️ кайло",
   "enchantment.chronosproject.deep_miner": "Deep Miner",
 
   "block.chronosproject.slice_of_cake": "Slice of Cake",
@@ -179,7 +179,7 @@
   "tooltip.chronosproject.block.slice_of_cake": "§7Stuff your face. Stuff someone else's face. Whatever.§r",
 
   "key.category.chronosproject.chronos": "Chronos Project",
-  "key.chronosproject.share_coords": "Share Coordinates",
+  "key.chronosproject.share_coords": "Поділитися координатами",
 
   "itemGroup.chronosproject.chronosproject": "Chronos Project"
 

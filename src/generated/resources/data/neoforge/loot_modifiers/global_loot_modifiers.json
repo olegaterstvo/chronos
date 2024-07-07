@@ -1,0 +1,9 @@
+{
+  "entries": [
+    "chronosproject:chronos_upgrade_smithing_template_from_abandoned_mineshaft",
+    "chronosproject:chronos_upgrade_smithing_template_from_bastion_treasure",
+    "chronosproject:chronos_upgrade_smithing_template_from_ancient_city",
+    "chronosproject:chronos_upgrade_smithing_template_from_end_city_treasure"
+  ],
+  "replace": false
+}
