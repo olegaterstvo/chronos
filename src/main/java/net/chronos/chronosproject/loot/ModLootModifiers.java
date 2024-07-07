@@ -2,10 +2,8 @@ package net.chronos.chronosproject.loot;
 
 import com.mojang.serialization.MapCodec;
 import net.chronos.chronosproject.ChronosProject;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 

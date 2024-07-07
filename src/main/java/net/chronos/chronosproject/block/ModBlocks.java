@@ -4,7 +4,6 @@ import net.chronos.chronosproject.ChronosProject;
 import net.chronos.chronosproject.block.custom.ModConcretePowderBlock;
 import net.chronos.chronosproject.block.custom.ModStairsBlock;
 import net.chronos.chronosproject.block.custom.SliceOfCake;
-import net.chronos.chronosproject.item.ModItemGroup;
 import net.chronos.chronosproject.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
@@ -354,31 +353,4 @@ public class ModBlocks {
         BLOCKS.register(eventBus);
     }
 
-//    private static Item registerBlockItem(String name, Block block,  RegistryKey<ItemGroup> tab, String tooltipKey, Integer stackSize){
-//        Item item = Registry.register(Registries.ITEM, new Identifier(ChronosProject.MOD_ID, name),
-//                new BlockItem(block, new FabricItemSettings().maxCount(stackSize)){
-//                    @Override
-//                    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-//                        tooltip.add(Text.translatable(tooltipKey));
-//                    }
-//                });
-//        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(item));
-//        return item;
-//    }
-//
-//
-//    private static Block registerBlock(String name, Block block, RegistryKey<ItemGroup> tab){
-//        registerBlockItem(name, block, tab);
-//        return Registry.register(Registries.BLOCK, new Identifier(ChronosProject.MOD_ID, name), block);
-//    }
-//
-//    private static Item registerBlockItem(String name, Block block, RegistryKey<ItemGroup> tab){
-//        Item item = Registry.register(Registries.ITEM, new Identifier(ChronosProject.MOD_ID, name),
-//                new BlockItem(block, new FabricItemSettings()));
-//        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(item));
-//        return item;
-//    }
-//    public static void registerModBlocks(){
-//        ChronosProject.LOGGER.debug("Registering ModBlocks for " + ChronosProject.MOD_ID);
-//    }
 }
