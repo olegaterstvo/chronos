@@ -171,7 +171,7 @@
   "item.minecraft.smithing_template.chronos_upgrade.base_slot_description": "Поместите алмазную кирку",
   "item.minecraft.smithing_template.chronos_upgrade.additions_slot_description": "Поместите барвинковый краситель",
 
-  "item.chronosproject.chronos_pickaxe": "Chronos Pickaxe",
+  "item.chronosproject.chronos_pickaxe": "Кирка ЧРОНОС ПРОЖЕКТ™️",
   "enchantment.chronosproject.deep_miner": "Deep Miner",
 
   "block.chronosproject.slice_of_cake": "Кусок торта",
@@ -179,7 +179,7 @@
   "tooltip.chronosproject.block.slice_of_cake": "§7Заставляет вас заткнуться. Заставляет другого заткнуться. Неважно.§r",
 
   "key.category.chronosproject.chronos": "Chronos Project",
-  "key.chronosproject.share_coords": "Share Coordinates",
+  "key.chronosproject.share_coords": "Поделиться координатами",
 
   "itemGroup.chronosproject.chronosproject": "Chronos Project"
 

@@ -5,7 +5,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.Collections;
-import java.util.List;
 
 public class ModSmithingTemplateItem extends SmithingTemplateItem {
     public ModSmithingTemplateItem(Text appliesToText, Text ingredientsText, Text titleText, Text baseSlotDescriptionText, Text additionsSlotDescriptionText, Identifier emptyBaseSlotTextures, Identifier emptyAdditionsSlotTextures) {

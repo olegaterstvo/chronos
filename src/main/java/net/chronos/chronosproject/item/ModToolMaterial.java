@@ -1,23 +1,26 @@
 package net.chronos.chronosproject.item;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    CHRONOS(5,10000,32.0f,3.0f, 26,
+    CHRONOS(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,10000,32.0f,3.0f, 26,
             () -> Ingredient.ofItems(ModItems.CHRONOS_DYE));
 
-    private final int miningLevel;
+    private final TagKey<Block> tagKey;
     private final int itemDurability;
     private final float miningSpeed;
     private final float attackDamage;
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    ModToolMaterial(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
-        this.miningLevel = miningLevel;
+    ModToolMaterial(TagKey<Block> tagKey, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+        this.tagKey = tagKey;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
@@ -41,8 +44,8 @@ public enum ModToolMaterial implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        return this.miningLevel;
+    public TagKey<Block> getInverseTag() {
+        return this.tagKey;
     }
 
     @Override

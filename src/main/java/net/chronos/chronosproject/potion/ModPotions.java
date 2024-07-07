@@ -1,28 +1,28 @@
 package net.chronos.chronosproject.potion;
 
 import net.chronos.chronosproject.ChronosProject;
-import net.chronos.chronosproject.mixin.BrewingRecipeRegistryMixin;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
-import javax.sound.sampled.Port;
 
 public class ModPotions {
-    public static Potion HASTE_POTION;
-    public static Potion STRONG_HASTE_POTION;
-    public static Potion LONG_HASTE_POTION;
+    public static RegistryEntry<Potion> HASTE_POTION;
+    public static RegistryEntry<Potion> STRONG_HASTE_POTION;
+    public static RegistryEntry<Potion> LONG_HASTE_POTION;
 
-    public static Potion registerPotion(String name, StatusEffect effect, Integer duration, Integer amplifier){
-        return Registry.register(Registries.POTION, new Identifier(ChronosProject.MOD_ID, name),
-        new Potion(new StatusEffectInstance(effect, duration, amplifier)));
+    public static RegistryEntry<Potion> registerPotion(String name, RegistryEntry<StatusEffect> effect, Integer duration, Integer amplifier){
+        return Registry.registerReference(Registries.POTION, Identifier.of(ChronosProject.MOD_ID, name),
+                new Potion(new StatusEffectInstance(effect, duration, amplifier)));
     }
 
     public static  void registerPotions(){
@@ -34,10 +34,12 @@ public class ModPotions {
     }
 
     private static void registerPotionRecipes(){
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.COCOA_BEANS, ModPotions.HASTE_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.HASTE_POTION, Items.GLOWSTONE_DUST, ModPotions.STRONG_HASTE_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.HASTE_POTION, Items.REDSTONE, ModPotions.LONG_HASTE_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.NAUTILUS_SHELL, Potions.LUCK);
+        FabricBrewingRecipeRegistryBuilder.BUILD.register((builder) -> {
+            builder.registerPotionRecipe(Potions.AWKWARD, Ingredient.ofItems(Items.COCOA_BEANS), ModPotions.HASTE_POTION);
+            builder.registerPotionRecipe(ModPotions.HASTE_POTION, Ingredient.ofItems(Items.GLOWSTONE_DUST), ModPotions.STRONG_HASTE_POTION);
+            builder.registerPotionRecipe(ModPotions.HASTE_POTION, Ingredient.ofItems(Items.REDSTONE), ModPotions.LONG_HASTE_POTION);
+            builder.registerPotionRecipe(Potions.AWKWARD, Ingredient.ofItems(Items.NAUTILUS_SHELL), Potions.LUCK);
+        });
 
     }
 }

@@ -2,13 +2,7 @@ package net.chronos.chronosproject.block.custom;
 
 import net.chronos.chronosproject.config.ModConfigs;
 import net.chronos.chronosproject.sound.ModSounds;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.CandleBlock;
-import net.minecraft.block.CandleCakeBlock;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -24,7 +18,6 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -35,7 +28,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
-public class SliceOfCake extends Block {
+public class SliceOfCake extends CakeBlock {
     public static final int MAX_BITES = 6;
     public static final IntProperty BITES = Properties.BITES;
     public static final int DEFAULT_COMPARATOR_OUTPUT = SliceOfCake.getComparatorOutput(0);
@@ -45,7 +38,7 @@ public class SliceOfCake extends Block {
 
     public SliceOfCake(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(BITES, 0));
+        this.setDefaultState(this.stateManager.getDefaultState().with(BITES, 0));
     }
 
     @Override
@@ -53,18 +46,19 @@ public class SliceOfCake extends Block {
         return BITES_TO_SHAPE[state.get(BITES)];
     }
 
+
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         Block block;
-        ItemStack itemStack = player.getStackInHand(hand);
+        ItemStack itemStack = player.getMainHandStack();
         Item item = itemStack.getItem();
         if (itemStack.isIn(ItemTags.CANDLES) && state.get(BITES) == 0 && (block = Block.getBlockFromItem(item)) instanceof CandleBlock) {
             if (!player.isCreative()) {
                 itemStack.decrement(1);
             }
             world.playSound(null, pos, SoundEvents.BLOCK_CAKE_ADD_CANDLE, SoundCategory.BLOCKS, 1.0f, 1.0f);
-            world.setBlockState(pos, CandleCakeBlock.getCandleCakeFromCandle(block));
-            world.emitGameEvent((Entity)player, GameEvent.BLOCK_CHANGE, pos);
+            world.setBlockState(pos, CandleCakeBlock.getCandleCakeFromCandle((CandleBlock) block));
+            world.emitGameEvent(player, GameEvent.BLOCK_CHANGE, pos);
             player.incrementStat(Stats.USED.getOrCreateStat(item));
             return ActionResult.SUCCESS;
         }
@@ -135,7 +129,7 @@ public class SliceOfCake extends Block {
     }
 
     @Override
-    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        return false;
+    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
+        return super.canPathfindThrough(state, type);
     }
 }

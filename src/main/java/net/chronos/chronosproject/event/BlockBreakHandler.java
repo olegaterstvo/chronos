@@ -1,30 +1,21 @@
 package net.chronos.chronosproject.event;
 
 import net.chronos.chronosproject.ChronosProject;
-import net.chronos.chronosproject.enchantment.ModEnchantments;
 import net.chronos.chronosproject.item.ModItems;
+import net.chronos.chronosproject.item.ModPickaxe;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.Block;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.NbtComponent;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.GameMode;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
-import java.util.Random;
 
 
 public class BlockBreakHandler {
@@ -39,7 +30,7 @@ public class BlockBreakHandler {
             dependencies.put("pz", player.getZ());
             dependencies.put("blockstate", state);
             dependencies.put("world", world);
-            dependencies.put("entity", player);
+            dependencies.put("player", player);
             execute(dependencies);
             return true;
         });
@@ -66,7 +57,7 @@ public class BlockBreakHandler {
                 ChronosProject.LOGGER.warn("Failed to load dependency z for BlockBreakHandler!");
             return;
         }
-        if (dependencies.get("entity") == null) {
+        if (dependencies.get("player") == null) {
             if (!dependencies.containsKey("entity"))
                 ChronosProject.LOGGER.warn("Failed to load dependency entity for BlockBreakHandler!");
             return;
@@ -76,24 +67,25 @@ public class BlockBreakHandler {
         int x = (int) dependencies.get("x");
         int y = (int) dependencies.get("y");
         int z = (int) dependencies.get("z");
-        Entity entity = (Entity) dependencies.get("entity");
+        PlayerEntity player = (PlayerEntity) dependencies.get("player");
 
-        if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY).getItem() == ModItems.CHRONOS_PICKAXE && !entity.isSneaky()) {
+        if (player.getMainHandStack().getItem() == ModItems.CHRONOS_PICKAXE && !player.isSneaky()) {
             int x_offset = 0;
             int y_offset = 0;
             int y_offset_down = 1;
             int z_offset = 0;
             int count = 0;
 
-
-            int mode = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY).getNbt().getInt("chronosproject.pickaxe_mode");
+            if (!player.getMainHandStack().getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT).contains("chronosproject.pickaxe_mode")){
+                ModPickaxe.addNbtToPickaxe(player, 1);
+            }
+            int mode = player.getMainHandStack().getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT).copyNbt().getInt("chronosproject.pickaxe_mode");
             switch (mode){
-                case 0 -> {
-                    (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY).getNbt().putInt("chronosproject.pickaxe_mode", 1);
+                case 1, 0 -> {
                     y_offset_down = 0;
                 }
-                case 1 -> {
-                    y_offset_down = 0;
+                case 2 -> {
+
                 }
                 case 3 ->{
                     x_offset = 1;
@@ -111,24 +103,24 @@ public class BlockBreakHandler {
                     z_offset = 3;
                 }
             }
-            if ((entity.getHorizontalFacing()).getAxis() == Direction.Axis.Z && entity.getPitch() < 45 && entity.getPitch() > -45) {
+            if ((player.getHorizontalFacing()).getAxis() == Direction.Axis.Z && player.getPitch() < 45 && player.getPitch() > -45) {
                 for (int i = x - x_offset; i <= x + x_offset; i++){
                     for (int j = y - y_offset_down; j <= y + y_offset; j++){
                         BlockPos _pos = new BlockPos(i, j, z);
                         if (world.getBlockState(_pos).getBlock() != Block.getBlockFromItem(Items.BEDROCK) && world.getBlockState(_pos).getBlock() != Block.getBlockFromItem(Items.AIR)) {
                             count +=1;
-                            Block.dropStacks(world.getBlockState(_pos), (World) world, new BlockPos(x, y, z), null, entity, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY));
+                            Block.dropStacks(world.getBlockState(_pos), (World) world, new BlockPos(x, y, z), null, player, player.getMainHandStack());
                             world.breakBlock(_pos, false);
                         }
                     }
                 }
-            } else if ((entity.getHorizontalFacing()).getAxis() == Direction.Axis.X && entity.getPitch() < 45 && entity.getPitch() > -45) {
+            } else if ((player.getHorizontalFacing()).getAxis() == Direction.Axis.X && player.getPitch() < 45 && player.getPitch() > -45) {
                 for (int i = z - z_offset; i <= z + z_offset; i++){
                     for (int j = y - y_offset_down; j <= y + y_offset; j++){
                         BlockPos _pos = new BlockPos(x, j, i);
                         if (world.getBlockState(_pos).getBlock() != Block.getBlockFromItem(Items.BEDROCK) && world.getBlockState(_pos).getBlock() != Block.getBlockFromItem(Items.AIR)) {
                             count +=1;
-                            Block.dropStacks(world.getBlockState(_pos), (World) world, new BlockPos(x, y, z), null, entity, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY));
+                            Block.dropStacks(world.getBlockState(_pos), (World) world, new BlockPos(x, y, z), null, player, player.getMainHandStack());
                             world.breakBlock(_pos, false);
                         }
                     }
@@ -139,17 +131,26 @@ public class BlockBreakHandler {
                         BlockPos _pos = new BlockPos(i, y, j);
                         if (world.getBlockState(_pos).getBlock() != Block.getBlockFromItem(Items.BEDROCK) && world.getBlockState(_pos).getBlock() != Block.getBlockFromItem(Items.AIR)) {
                             count +=1;
-                            Block.dropStacks(world.getBlockState(_pos), (World) world, new BlockPos(x, y, z), null, entity, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY));
+                            Block.dropStacks(world.getBlockState(_pos), (World) world, new BlockPos(x, y, z), null, player, player.getMainHandStack());
                             world.breakBlock(_pos, false);
 
                         }
                     }
                 }
             }
-            if (!Objects.requireNonNull(world.getPlayerByUuid(entity.getUuid())).isCreative()) {
-                count = (count - 1) / (EnchantmentHelper.getEquipmentLevel(Enchantments.UNBREAKING, (LivingEntity) entity) + 1);
-                int damage = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY).getNbt().getInt("Damage") + count;
-                (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandStack() : ItemStack.EMPTY).getNbt().putInt("Damage", damage);
+            if (!player.isCreative()) {
+                int unbreakingLevel = 0;
+                // майкрософт контора пидорасов
+                if (player.getMainHandStack().get(DataComponentTypes.ENCHANTMENTS) !=  null){
+                    if (String.valueOf(player.getMainHandStack().get(DataComponentTypes.ENCHANTMENTS).getEnchantmentEntries()).contains("Unbreaking}=>")){
+                        unbreakingLevel = Integer.parseInt(String.valueOf(
+                                player.getMainHandStack().get(DataComponentTypes.ENCHANTMENTS).getEnchantmentEntries()).split("Unbreaking}=>")[1].substring(0,1)
+                        );
+                    }
+                }
+                count = (count - 1) / (unbreakingLevel + 1);
+                int damage = player.getMainHandStack().get(DataComponentTypes.DAMAGE).intValue() + count;
+                player.getMainHandStack().setDamage(damage);
             }
         }
     }

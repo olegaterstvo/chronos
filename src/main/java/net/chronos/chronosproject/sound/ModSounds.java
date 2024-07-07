@@ -10,7 +10,7 @@ public class ModSounds {
     public static SoundEvent EAT_SLICE_OF_CAKE;
 
     private static SoundEvent registerSoundEvent(String name){
-        Identifier id = new Identifier(ChronosProject.MOD_ID, name);
+        Identifier id = Identifier.of(ChronosProject.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 

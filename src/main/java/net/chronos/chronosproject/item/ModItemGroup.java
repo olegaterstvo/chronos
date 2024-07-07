@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.text.Text;
 
 public class ModItemGroup {
-    public static final RegistryKey<ItemGroup> CHRONOSPROJECT = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(ChronosProject.MOD_ID, "chronosproject"));
+    public static final RegistryKey<ItemGroup> CHRONOSPROJECT = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(ChronosProject.MOD_ID, "chronosproject"));
 
     public static void registerItemGroups() {
         Registry.register(Registries.ITEM_GROUP, CHRONOSPROJECT, FabricItemGroup.builder()

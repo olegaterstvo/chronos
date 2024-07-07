@@ -8,85 +8,61 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModLootTableModifiers {
     private static final Identifier ABANDONED_MINESHAFT_ID =
-            new Identifier("minecraft","chests/abandoned_mineshaft");
+            Identifier.of("minecraft","chests/abandoned_mineshaft");
     private static final Identifier ANCIENT_CITY_ID =
-            new Identifier("minecraft","chests/ancient_city");
-    private static final Identifier NETHER_BRIDGE_ID =
-            new Identifier("minecraft","chests/nether_bridge");
-    private static final Identifier BASTION_BRIDGE_ID =
-            new Identifier("minecraft","chests/bastion_bridge");
-    private static final Identifier BASTION_HOGLIN_STABLE_ID =
-            new Identifier("minecraft","chests/bastion_hoglin_stable");
+            Identifier.of("minecraft","chests/ancient_city");
+    private static final Identifier END_CITY_TREASURE_ID =
+            Identifier.of("minecraft","chests/end_city_treasure");
     private static final Identifier BASTION_TREASURE_ID =
-            new Identifier("minecraft","chests/bastion_treasure");
+            Identifier.of("minecraft","chests/bastion_treasure");
 
     public static void modifyLootTables(){
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (ABANDONED_MINESHAFT_ID.equals(id)){
+        LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {
+            if (RegistryKey.of(RegistryKeys.LOOT_TABLE, ABANDONED_MINESHAFT_ID).equals(key)){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.1f))  //chance
-                        .with(ItemEntry.builder(ModItems.CHRONOS_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
-
-                tableBuilder.pool(poolBuilder.build());
-            }
-        });
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (ANCIENT_CITY_ID.equals(id)){
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.5f))  //chance
-                        .with(ItemEntry.builder(ModItems.CHRONOS_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
-
-                tableBuilder.pool(poolBuilder.build());
-            }
-        });
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (NETHER_BRIDGE_ID.equals(id)){
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.15f))  //chance
+                        .conditionally(RandomChanceLootCondition.builder(0.03f))     //chance
                         .with(ItemEntry.builder(ModItems.CHRONOS_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
         });
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (BASTION_BRIDGE_ID.equals(id)){
+        LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {
+            if (RegistryKey.of(RegistryKeys.LOOT_TABLE, ANCIENT_CITY_ID).equals(key)){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.15f))  //chance
+                        .conditionally(RandomChanceLootCondition.builder(0.15f))     //chance
                         .with(ItemEntry.builder(ModItems.CHRONOS_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
         });
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (BASTION_HOGLIN_STABLE_ID.equals(id)){
+        LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {
+            if (RegistryKey.of(RegistryKeys.LOOT_TABLE, BASTION_TREASURE_ID).equals(key)){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.2f))  //chance
+                        .conditionally(RandomChanceLootCondition.builder(0.07f))     //chance
                         .with(ItemEntry.builder(ModItems.CHRONOS_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
         });
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (BASTION_TREASURE_ID.equals(id)){
+        LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {
+            if (RegistryKey.of(RegistryKeys.LOOT_TABLE, END_CITY_TREASURE_ID).equals(key)){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.33f))  //chance
+                        .conditionally(RandomChanceLootCondition.builder(0.10f))     //chance
                         .with(ItemEntry.builder(ModItems.CHRONOS_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
