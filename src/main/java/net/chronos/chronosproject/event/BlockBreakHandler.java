@@ -7,8 +7,12 @@ import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.Block;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.NbtComponent;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
@@ -16,6 +20,7 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 
 public class BlockBreakHandler {
@@ -139,13 +144,12 @@ public class BlockBreakHandler {
                 }
             }
             if (!player.isCreative()) {
+                Set<RegistryEntry<Enchantment>> enchantments = EnchantmentHelper.getEnchantments(player.getMainHandStack()).getEnchantments();
                 int unbreakingLevel = 0;
-                // майкрософт контора пидорасов
-                if (player.getMainHandStack().get(DataComponentTypes.ENCHANTMENTS) !=  null){
-                    if (String.valueOf(player.getMainHandStack().get(DataComponentTypes.ENCHANTMENTS).getEnchantmentEntries()).contains("Unbreaking}=>")){
-                        unbreakingLevel = Integer.parseInt(String.valueOf(
-                                player.getMainHandStack().get(DataComponentTypes.ENCHANTMENTS).getEnchantmentEntries()).split("Unbreaking}=>")[1].substring(0,1)
-                        );
+
+                for (RegistryEntry<Enchantment> enchantment: enchantments) {
+                    if (enchantment.matchesId(Identifier.ofVanilla("unbreaking"))){
+                        unbreakingLevel = EnchantmentHelper.getLevel(enchantment, player.getMainHandStack());
                     }
                 }
                 count = (count - 1) / (unbreakingLevel + 1);
