@@ -2,7 +2,6 @@ package net.chronos.chronosproject;
 
 import net.chronos.chronosproject.block.ModBlocks;
 import net.chronos.chronosproject.config.ModConfigs;
-//import net.chronos.chronosproject.enchantment.ModEnchantments;
 import net.chronos.chronosproject.event.BlockBreakHandler;
 import net.chronos.chronosproject.item.ModItemGroup;
 import net.chronos.chronosproject.item.ModItems;
@@ -32,7 +31,6 @@ public class ChronosProject implements ModInitializer {
 		ModTrades.registerCustomWanderingTrades();
 
 		BlockBreakHandler.register();
-//		ModEnchantments.registerModEnchantments();
 
 		ModLootTableModifiers.modifyLootTables();
 	}
