@@ -1,0 +1,1 @@
+effect give @s minecraft:haste 1 80 true
