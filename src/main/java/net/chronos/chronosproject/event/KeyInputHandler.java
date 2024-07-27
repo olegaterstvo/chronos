@@ -16,15 +16,20 @@ public class KeyInputHandler {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if(shareCoords.wasPressed()){
                 if(client.player != null){
-//                    client.player.networkHandler.sendChatMessage(client.player.getBlockX() + " " + client.player.getBlockY() + " " + client.player.getBlockZ());
-                    String msg = "tellraw @a [\"\",{\"text\":\"<" +
-                            client.player.getName().getString() +
-                            "> \"},{\"text\":\"" +
-                            client.player.getBlockX() + " " + client.player.getBlockY() + " " + client.player.getBlockZ() +
-                            "\",\"color\":\"blue\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/tp " +
-                            client.player.getBlockX() + " " + client.player.getBlockY() + " " + client.player.getBlockZ() +
-                            "\"}}]";
-                    client.player.networkHandler.sendCommand(msg);
+                    if(client.player.hasPermissionLevel(2)) {
+                        String msg = "tellraw @a [\"\",{\"text\":\"<" +
+                                client.player.getName().getString() +
+                                "> \"},{\"text\":\"" +
+                                client.player.getBlockX() + " " + client.player.getBlockY() + " " + client.player.getBlockZ() +
+                                "\",\"color\":\"blue\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/tp " +
+                                client.player.getBlockX() + " " + client.player.getBlockY() + " " + client.player.getBlockZ() +
+                                "\"}}]";
+                        client.player.networkHandler.sendCommand(msg);
+                    } else {
+                        client.player.networkHandler.sendChatMessage(
+                            client.player.getBlockX() + " " + client.player.getBlockY() + " " + client.player.getBlockZ()
+                        );
+                    }
                 }
             }
         });
