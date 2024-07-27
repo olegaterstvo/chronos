@@ -39,15 +39,18 @@ public class KeyInputHandler {
             // Execute logic to perform on click here
             LocalPlayer localPlayer = Minecraft.getInstance().player;
             if (localPlayer != null) {
-//                localPlayer.connection.sendChat(localPlayer.getBlockX() + " " + localPlayer.getBlockY() + " " + localPlayer.getBlockZ());
-                String msg = "tellraw @a [\"\",{\"text\":\"<" +
-                        localPlayer.getName().getString() +
-                        "> \"},{\"text\":\"" +
-                        localPlayer.getBlockX() + " " + localPlayer.getBlockY() + " " + localPlayer.getBlockZ() +
-                        "\",\"color\":\"blue\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/tp " +
-                        localPlayer.getBlockX() + " " + localPlayer.getBlockY() + " " + localPlayer.getBlockZ() +
-                        "\"}}]";
-                localPlayer.connection.sendCommand(msg);
+                if(localPlayer.getPermissionLevel() >= 2) {
+                    String msg = "tellraw @a [\"\",{\"text\":\"<" +
+                            localPlayer.getName().getString() +
+                            "> \"},{\"text\":\"" +
+                            localPlayer.getBlockX() + " " + localPlayer.getBlockY() + " " + localPlayer.getBlockZ() +
+                            "\",\"color\":\"blue\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/tp " +
+                            localPlayer.getBlockX() + " " + localPlayer.getBlockY() + " " + localPlayer.getBlockZ() +
+                            "\"}}]";
+                    localPlayer.connection.sendCommand(msg);
+                } else {
+                    localPlayer.connection.sendChat(localPlayer.getBlockX() + " " + localPlayer.getBlockY() + " " + localPlayer.getBlockZ());
+                }
             }
         }
     }
